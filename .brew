@@ -1,0 +1,62 @@
+# Make sure we’re using the latest Homebrew
+brew update
+
+# Upgrade any already-installed formulae
+brew upgrade
+
+# Install GNU core utilities (those that come with OS X are outdated)
+brew install coreutils
+echo "Don’t forget to add $(brew --prefix coreutils)/libexec/gnubin to \$PATH."
+
+# Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
+brew install findutils
+
+# Install Bash 4
+brew install bash
+
+# Install wget with IRI support
+brew install wget --enable-iri
+
+# Install other useful binaries
+brew install git
+brew install node
+brew install python3
+brew install tmux
+brew install redis
+brew install ctags
+brew install vim
+
+# Add global search
+brew install the_silver_searcher
+
+# Add colors to the terminal
+brew install grc
+
+# Install native apps
+brew tap phinze/homebrew-cask
+brew install brew-cask
+
+function installcask() {
+  if brew cask info "${@}" | grep "Not installed" > /dev/null; then
+    brew cask install "${@}"
+  else
+    echo "${@} is already installed."
+  fi
+}
+
+installcask alfred
+installcask bartender
+installcask colloquy
+installcask dropbox
+installcask evernote
+installcask google-chrome
+installcask istat-menus
+installcask iterm2
+installcask path-finder
+installcask postgres
+installcask rdio
+installcask sublime-text
+installcask textmate2
+installcask the-unarchiver
+installcask vagrant
+installcask virtualbox

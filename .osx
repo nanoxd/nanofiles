@@ -16,6 +16,9 @@ sudo scutil --set HostName "Nanobook"
 sudo scutil --set LocalHostName "Nanobook"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Nanobook"
 
+# Enable access for assistive devices
+sudo touch /private/var/db/.AccessibilityAPIEnabled
+
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 

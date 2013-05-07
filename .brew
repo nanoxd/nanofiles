@@ -32,9 +32,13 @@ brew install the_silver_searcher
 # Add colors to the terminal
 brew install grc
 
+# Add git ncurses gui for log view
+brew install tig
+
 # Install native apps
 brew tap phinze/homebrew-cask
 brew install brew-cask
+
 
 function installcask() {
   if brew cask info "${@}" | grep "Not installed" > /dev/null; then

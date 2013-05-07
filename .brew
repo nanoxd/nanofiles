@@ -50,6 +50,7 @@ installcask colloquy
 installcask dropbox
 installcask evernote
 installcask google-chrome
+installcask instacast
 installcask istat-menus
 installcask iterm2
 installcask path-finder

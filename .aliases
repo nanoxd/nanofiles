@@ -8,6 +8,7 @@ alias -- -="cd -"
 
 # Shortcuts
 alias dev="cd ~/Developer/"
+alias rails4="rvm use 2.0.0 && rvm gemset use rails4"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`

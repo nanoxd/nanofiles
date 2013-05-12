@@ -17,14 +17,27 @@ brew install bash
 # Install wget with IRI support
 brew install wget --enable-iri
 
-# Install other useful binaries
+# Install fix for proper clipboard paste support
+brew install reattach-to-user-namespace
+
+# Install version control systems
 brew install git
+brew install mercurial
+
+# Install database systems
+brew install redis
+brew install sqlite
+
+# Install the languages
 brew install node
 brew install python3
+brew install python
+
+# Install other useful binaries
 brew install tmux
-brew install redis
 brew install ctags
 brew install vim
+brew install heroku-toolbelt
 
 # Add global search
 brew install the_silver_searcher

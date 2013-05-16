@@ -18,6 +18,10 @@ set t_Co=256
 set background=dark
 colorscheme solarized
 
+" Show “invisible” characters
+set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+set list
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Encoding and locale
@@ -31,6 +35,11 @@ endtry
 
 set ffs=unix,dos,mac "Default file types
 
+" Relative numbers
+if exists("&relativenumber")
+    set relativenumber
+    au BufReadPost * set relativenumber
+endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files and backups
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -39,3 +48,7 @@ set nobackup
 set nowb
 set noswapfile
 
+" Adds ; as the Ctrl+P fuzzy search
+nmap ; :CtrlPBuffer<CR>
+
+nmap \e :NERDTreeToggle<CR>

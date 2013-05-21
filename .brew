@@ -47,6 +47,7 @@ brew install grc
 
 # Add git ncurses gui for log view
 brew install tig
+brew install hub
 
 # Install native apps
 brew tap phinze/homebrew-cask

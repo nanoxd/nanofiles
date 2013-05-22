@@ -18,7 +18,7 @@ set -g -x PAGER less
 
 # Link Homebrew casks in `/Applications` rather than `~/Applications`
 set -g -x HOMEBREW_CASK_OPTS "--appdir=/Applications"
-
+set -g -x DISABLE_AUTO_TITLE true
 
 ## Functions ##
 

@@ -67,6 +67,7 @@ installcask bartender
 installcask colloquy
 installcask dropbox
 installcask evernote
+installcask gfxcardstatus
 installcask google-chrome
 installcask instacast
 installcask istat-menus

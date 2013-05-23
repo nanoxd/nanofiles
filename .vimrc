@@ -4,8 +4,13 @@
 
 " No reason to limit ourselves to vi compatibility
 set nocompatible
+set nobackup
+set nowritebackup
+set noswapfile
 set ruler
 set laststatus=2
+set incsearch " Do incremental searching
+set noshowmode " Hide the default mode text
 
 " Set encoding
 set encoding=utf-8
@@ -54,6 +59,9 @@ au FileType make set noexpandtab
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}  set ft=ruby
 
+" Set Sass files as sass
+ au BufRead,BufNewFile *.scss set filetype=scss
+
 " add json syntax highlighting
 au BufNewFile,BufRead *.json set ft=javascript
 
@@ -61,6 +69,14 @@ au BufRead,BufNewFile *.txt call s:setupWrapping()
 
 " make Python follow PEP8
 au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
+
+" Treat <li> and <p> tags like the block tags they are
+let g:html_indent_tags = 'li\|p'
+
+" Markdown files end in .md
+au BufRead,BufNewFile *.md set filetype=markdown
+" Enable spellchecking for Markdown
+au BufRead,BufNewFile *.md setlocal spell
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -86,11 +102,17 @@ if has("autocmd")
     \| exe "normal g'\"" | endif
 endif
 
-" Show the damn dotfiles
-let g:ctrlp_show_hidden = 1
+
+" Get off my lawn
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
+
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Bundles
+" => Bundles && Bundle Specific Settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Declare bundles are handled via Vundle
@@ -101,36 +123,66 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Define bundles via Github repos
-" Bundle 'croaky/vim-colors-github'
-Bundle 'danro/rename.vim'
+
+" Languages
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'tpope/vim-cucumber'
+Bundle 'vim-scripts/fish-syntax'
+Bundle 'tpope/vim-git'
+Bundle 'jnwhiteh/vim-golang'
+Bundle 'tpope/vim-haml'
+Bundle 'wlangstroth/vim-haskell'
+Bundle 'xenoterracide/html.vim'
+Bundle 'vim-scripts/HTML-AutoCloseTag'
+Bundle 'jelera/vim-javascript-syntax'
+Bundle 'tpope/vim-markdown'
+Bundle 'thiderman/nginx-vim-syntax'
+Bundle 'b4winckler/vim-objc'
+Bundle 'ajf/puppet-vim'
+Bundle 'tpope/vim-rails'
+Bundle 'skwp/vim-rspec'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'sunaku/vim-ruby-minitest'
+Bundle 'cakebaker/scss-syntax.vim'
+
+"Tools
+Bundle 'danro/rename.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'nanki/treetop.vim'
-Bundle 'skwp/vim-rspec'
 Bundle 'timcharper/textile.vim'
-Bundle 'tomasr/molokai'
-Bundle 'tpope/vim-cucumber'
-Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-surround'
 Bundle 'tsaleh/vim-matchit'
 Bundle 'vim-scripts/ctags.vim'
 Bundle 'vim-scripts/greplace.vim'
 Bundle 'vim-scripts/tComment'
-Bundle 'xenoterracide/html.vim'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'vim-scripts/HTML-AutoCloseTag'
 Bundle 'xolox/vim-notes'
+Bundle 'scrooloose/syntastic' " VIM Syntax Linter
+
+"Colors
+Bundle 'tomasr/molokai'
+Bundle 'altercation/vim-colors-solarized'
+
+
+
+"" CtrlP
+" Adds ; as the Ctrl+P fuzzy search
+nmap ; :CtrlPBuffer<CR>
+" Show the damn dotfiles
+let g:ctrlp_show_hidden = 1
+
+"" NERDTree
+nmap \e :NERDTreeToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files and backups
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Adds ; as the Ctrl+P fuzzy search
-nmap ; :CtrlPBuffer<CR>
 
-nmap \e :NERDTreeToggle<CR>
+
+" Use Ag (https://github.com/ggreer/the_silver_searcher) instead of Grep when
+" available
+if executable("ag")
+  set grepprg=ag\ --noheading\ --nogroup\ --nocolor
+endif

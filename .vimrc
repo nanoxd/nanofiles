@@ -86,7 +86,8 @@ if has("autocmd")
     \| exe "normal g'\"" | endif
 endif
 
-
+" Show the damn dotfiles
+let g:ctrlp_show_hidden = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Bundles

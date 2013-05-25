@@ -3,6 +3,7 @@
 .bundle
 .sass-cache/
 db/*.sqlite3
+*.mp4
 log/*.log
 rerun.txt
 tags

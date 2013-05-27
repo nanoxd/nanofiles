@@ -127,6 +127,7 @@ Bundle 'gmarik/vundle'
 " Languages
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-cucumber'
+Bundle 'elixir-lang/vim-elixir'
 Bundle 'vim-scripts/fish-syntax'
 Bundle 'tpope/vim-git'
 Bundle 'jnwhiteh/vim-golang'

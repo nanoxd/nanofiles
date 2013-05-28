@@ -147,19 +147,21 @@ Bundle 'sunaku/vim-ruby-minitest'
 Bundle 'cakebaker/scss-syntax.vim'
 
 "Tools
-Bundle 'danro/rename.vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'nanki/treetop.vim'
-Bundle 'timcharper/textile.vim'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-surround'
-Bundle 'tsaleh/vim-matchit'
 Bundle 'vim-scripts/ctags.vim'
+Bundle 'kien/ctrlp.vim'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-fugitive'
 Bundle 'vim-scripts/greplace.vim'
-Bundle 'vim-scripts/tComment'
+Bundle 'tsaleh/vim-matchit'
 Bundle 'xolox/vim-notes'
+Bundle 'danro/rename.vim'
+Bundle 'tristen/vim-sparkup' " Zen Coding for VIM
+Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/syntastic' " VIM Syntax Linter
+Bundle 'godlygeek/tabular' " Text filtering and alignment
+Bundle 'vim-scripts/tComment'
+Bundle 'timcharper/textile.vim'
+Bundle 'nanki/treetop.vim'
 
 "Colors
 Bundle 'tomasr/molokai'

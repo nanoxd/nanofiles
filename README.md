@@ -5,7 +5,7 @@ Welcome to the deep abyss that is my dotfiles
 Fish is my shell, ZSH has it's back  
 VIM is the editor except when SublimeText is needed  
 TMux drops it like it's not screen.  
-Git is my VCS and hub makes it better.  
+Git is my VCS and `hub` makes it better.  
 
 
 ## Keyboard Shortcuts

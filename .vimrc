@@ -149,6 +149,7 @@ Bundle 'cakebaker/scss-syntax.vim'
 "Tools
 Bundle 'vim-scripts/ctags.vim'
 Bundle 'kien/ctrlp.vim'
+Bundle 'raimondi/delimitmate' " Adds automatic closing of quotes, parenthesis, brackts, etc.
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
 Bundle 'vim-scripts/greplace.vim'

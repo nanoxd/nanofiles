@@ -144,6 +144,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'skwp/vim-rspec'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'sunaku/vim-ruby-minitest'
+Bundle "aaronjensen/vim-sass-status.git"
 Bundle 'cakebaker/scss-syntax.vim'
 
 "Tools

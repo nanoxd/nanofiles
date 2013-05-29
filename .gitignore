@@ -1,14 +1,40 @@
+# Compiled Python Files
+*.pyc
+
+# Folder view configuration files
 *.DS_Store
-*.sw[nop]
+Desktop.ini
+
+# Thumbnail cache files
+._*
+Thumbs.db
+
+# Files on External Drives
+.Spotlight-V100
+.Trashes
+
+# Cache, Swap, and logs
+*.sw[a-z]
 .bundle
 .sass-cache/
-db/*.sqlite3
-*.mp4
+!tmp/cache/.keep
 log/*.log
 rerun.txt
-tags
-tmp/**/*
-!tmp/cache/.keep
+
+# Database
+db/*.sqlite3
+
+# Multimedia
+*.mp4
+
+# Ruby specific
 vendor/bundler_gems
-vim/.netrwhist
 zeus.json
+
+# ctags
+tags
+TAGS
+
+tmp/**/*
+vim/.netrwhist
+

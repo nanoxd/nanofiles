@@ -2,8 +2,8 @@
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" No reason to limit ourselves to vi compatibility
-set nocompatible
+
+set nocompatible " No reason to limit ourselves to vi compatibility
 set nobackup
 set nowritebackup
 set noswapfile
@@ -22,6 +22,10 @@ autocmd! bufwritepost .vimrc source ~/.vimrc
 set history=300
 
 nnoremap <leader>ev :edit ~/.vimrc<cr>
+
+if $SHELL =~ 'bin/fish'
+  sets shell=/bin/zsh
+endif
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -155,7 +159,7 @@ Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
 Bundle 'vim-scripts/greplace.vim'
 Bundle 'tsaleh/vim-matchit'
-Bundle 'xolox/vim-notes'
+Bundle 'scrooloose/nerdtree' " File Management
 Bundle 'danro/rename.vim'
 Bundle 'tristen/vim-sparkup' " Zen Coding for VIM
 Bundle 'tpope/vim-surround'
@@ -168,6 +172,7 @@ Bundle 'nanki/treetop.vim'
 "Colors
 Bundle 'tomasr/molokai'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'd11wtq/tomorrow-theme-vim'
 
 
 

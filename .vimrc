@@ -154,17 +154,17 @@ Bundle 'cakebaker/scss-syntax.vim'
 "Tools
 Bundle 'vim-scripts/ctags.vim'
 Bundle 'kien/ctrlp.vim'
-Bundle 'raimondi/delimitmate' " Adds automatic closing of quotes, parenthesis, brackts, etc.
+Bundle 'raimondi/delimitmate' "Adds automatic closing of quotes, parenthesis, brackts, etc.
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
 Bundle 'vim-scripts/greplace.vim'
 Bundle 'tsaleh/vim-matchit'
-Bundle 'scrooloose/nerdtree' " File Management
+Bundle 'scrooloose/nerdtree' "File Management
 Bundle 'danro/rename.vim'
-Bundle 'tristen/vim-sparkup' " Zen Coding for VIM
+Bundle 'tristen/vim-sparkup' "Zen Coding for VIM
 Bundle 'tpope/vim-surround'
-Bundle 'scrooloose/syntastic' " VIM Syntax Linter
-Bundle 'godlygeek/tabular' " Text filtering and alignment
+Bundle 'scrooloose/syntastic' "VIM Syntax Linter
+Bundle 'godlygeek/tabular' "Text filtering and alignment
 Bundle 'vim-scripts/tComment'
 Bundle 'timcharper/textile.vim'
 Bundle 'nanki/treetop.vim'

@@ -11,8 +11,9 @@ echo "Don’t forget to add $(brew --prefix coreutils)/libexec/gnubin to \$PATH.
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
 brew install findutils
 
-# Install Bash 4
+# Install Bash 4 & fishfish
 brew install bash
+brew install fish
 
 # Install wget with IRI support
 brew install wget --enable-iri
@@ -32,6 +33,7 @@ brew install sqlite
 brew install node
 brew install python3
 brew install python
+brew install go
 
 # Install other useful binaries
 brew install tmux
@@ -48,6 +50,9 @@ brew install grc
 # Add git ncurses gui for log view
 brew install tig
 brew install hub
+
+# Add media manipulation
+brew install youtube-dl
 
 # Install native apps
 brew tap phinze/homebrew-cask

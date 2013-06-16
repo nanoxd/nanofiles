@@ -1,0 +1,15 @@
+# The basics
+gem install rails
+gem install thin
+gem install foreman
+gem install thor
+
+# Include schemas in models
+gem install annotate
+
+# Add pry to everything!
+gem install pry
+gem install pry-plus
+
+# Manage Pow
+gem install powify

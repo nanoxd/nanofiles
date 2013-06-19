@@ -9,7 +9,9 @@ set PATH /usr/local/share/python $PATH
 # Set Heroku Toolbelt
 set PATH /usr/local/heroku/bin $PATH
 # Set Node.js path
-set PATH /usr/local/share/npm/bin $PATHT
+set PATH /usr/local/share/npm/bin $PATH
+# Set Elixir path
+set PATH /usr/local/bin/elixir/bin $PATH
 
 # Globally recognized variables
 set -g -x VISUAL vim

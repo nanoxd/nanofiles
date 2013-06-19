@@ -165,6 +165,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'raimondi/delimitmate' "Adds automatic closing of quotes, parenthesis, brackts, etc.
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
+Bundle 'mattn/gist-vim'
 Bundle 'vim-scripts/greplace.vim'
 Bundle 'tsaleh/vim-matchit'
 Bundle 'scrooloose/nerdtree' "File Management

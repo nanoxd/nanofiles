@@ -23,6 +23,10 @@ brew install reattach-to-user-namespace
 
 # Install version control systems
 brew install git
+# Add git ncurses gui for log view
+brew install tig
+# Extend git with github
+brew install hub
 brew install mercurial
 
 # Install database systems
@@ -48,12 +52,11 @@ brew install the_silver_searcher
 # Add colors to the terminal
 brew install grc
 
-# Add git ncurses gui for log view
-brew install tig
-brew install hub
-
 # Add media manipulation
 brew install youtube-dl
+
+# Add an interactive process viewer
+brew install htop
 
 # Install native apps
 brew tap phinze/homebrew-cask

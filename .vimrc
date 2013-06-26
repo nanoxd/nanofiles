@@ -1,13 +1,15 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
+let mapleader = " "
 
 set nocompatible " No reason to limit ourselves to vi compatibility
 set nobackup
 set nowritebackup
 set noswapfile
 set ruler
+set history=300
+set showcmd       " display incomplete commands
 set laststatus=2
 set incsearch " Do incremental searching
 set noshowmode " Hide the default mode text
@@ -18,13 +20,10 @@ set encoding=utf-8
 " When vimrc is edited, reload it
 autocmd! bufwritepost .vimrc source ~/.vimrc
 
-" Remember command line entries
-set history=300
-
 nnoremap <leader>ev :edit ~/.vimrc<cr>
 
 if $SHELL =~ 'bin/fish'
-  sets shell=/bin/zsh
+  set shell=/bin/zsh
 endif
 
 
@@ -32,12 +31,10 @@ endif
 " => Look, Style, and Feel
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-set t_Co=256
-set background=dark
-colorscheme solarized
+syntax enable
+colorscheme Tomorrow-Night-Bright
+set rtp+=~/Developer/Code/powerline/powerline/bindings/vim
 let g:Powerline_symbols = 'fancy'
-let g:Powerline_colorscheme = 'solarized' " https://raw.github.com/gist/2003862/e245d6d9b60b16ea38d384107401ef9ad04fbb47/solarized.vim
-
 
 " Whitespace defaults
 set nowrap
@@ -122,6 +119,8 @@ function! NumberToggle()
 endfunc
 
 nnoremap <C-n> :call NumberToggle()<cr>
+" Snippets are activated by Shift+Tab
+let g:snippetsEmu_key = "<S-Tab>"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Bundles && Bundle Specific Settings
@@ -162,18 +161,23 @@ Bundle 'cakebaker/scss-syntax.vim'
 "Tools
 Bundle 'vim-scripts/ctags.vim'
 Bundle 'kien/ctrlp.vim'
-Bundle 'raimondi/delimitmate' "Adds automatic closing of quotes, parenthesis, brackts, etc.
+"Adds automatic closing of quotes, parenthesis, brackts, etc.
+Bundle 'raimondi/delimitmate'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
 Bundle 'mattn/gist-vim'
 Bundle 'vim-scripts/greplace.vim'
 Bundle 'tsaleh/vim-matchit'
-Bundle 'scrooloose/nerdtree' "File Management
+"File Management
+Bundle 'scrooloose/nerdtree'
 Bundle 'danro/rename.vim'
-Bundle 'tristen/vim-sparkup' "Zen Coding for VIM
+"Zen Coding for VIM
+Bundle 'tristen/vim-sparkup'
 Bundle 'tpope/vim-surround'
-Bundle 'scrooloose/syntastic' "VIM Syntax Linter
-Bundle 'godlygeek/tabular' "Text filtering and alignment
+"VIM Syntax Linter
+Bundle 'scrooloose/syntastic'
+"Text filtering and alignment
+Bundle 'godlygeek/tabular'
 Bundle 'vim-scripts/tComment'
 Bundle 'timcharper/textile.vim'
 Bundle 'nanki/treetop.vim'
@@ -197,8 +201,6 @@ nmap \e :NERDTreeToggle<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files and backups
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
 
 " Use Ag (https://github.com/ggreer/the_silver_searcher) instead of Grep when
 " available

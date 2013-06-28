@@ -9,7 +9,7 @@ gem install annotate
 
 # Add pry to everything!
 gem install pry
-gem install pry-plus
+gem install pry-full
 
 # Manage Pow
 gem install powify

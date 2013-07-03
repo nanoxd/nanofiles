@@ -13,6 +13,7 @@ set showcmd       " display incomplete commands
 set laststatus=2
 set incsearch " Do incremental searching
 set noshowmode " Hide the default mode text
+set rnu
 
 " Set encoding
 set encoding=utf-8

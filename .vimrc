@@ -80,6 +80,9 @@ au BufRead,BufNewFile *.md set filetype=markdown
 " Enable spellchecking for Markdown
 au BufRead,BufNewFile *.md setlocal spell
 
+" Set syntax for Go
+au BufRead,BufNewFile *.go set filetype=go
+
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 

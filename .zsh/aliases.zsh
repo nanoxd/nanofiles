@@ -1,13 +1,20 @@
-# Easier navigation: .., ..., ...., ....., ~ and -
+# -------------------------------------------------------------------
+# Navigation
+# -------------------------------------------------------------------
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ~="cd ~"
 alias -- -="cd -"
-
-# Shortcuts
 alias dev="cd ~/Developer/"
+
+
+## Helpers ##
+alias du='du -h -c'         # Calculate total disk usage for a folder
+alias oo='open .' # open current directory in OS X Finder
+
+
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -35,3 +42,24 @@ alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/La
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 
+# -------------------------------------------------------------------
+# Git
+# -------------------------------------------------------------------
+alias ga='git add'
+alias gp='git push'
+alias gl='git log'
+alias gpl="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gs='git status'
+alias gd='git diff'
+alias gm='git commit -m'
+alias gma='git commit -am'
+alias gb='git branch'
+alias gc='git checkout'
+alias gcb='git checkout -b'
+alias gra='git remote add'
+alias grr='git remote rm'
+alias gpu='git pull'
+alias gcl='git clone'
+alias gta='git tag -a -m'
+alias gf='git reflog'
+alias gv='git log --pretty=format:'%s' | cut -d " " -f 1 | sort | uniq -c | sort -nr'

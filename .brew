@@ -101,6 +101,7 @@ installcask powerkey
 installcask rdio
 installcask shuttle
 installcask skype
+installcask sourcetree
 installcask sublime-text
 installcask textmate
 installcask the-unarchiver

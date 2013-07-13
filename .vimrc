@@ -190,6 +190,7 @@ Bundle 'nanki/treetop.vim'
 Bundle 'tomasr/molokai'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'd11wtq/tomorrow-theme-vim'
+Bundle 'vim-scripts/wombat256.vim'
 
 
 

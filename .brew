@@ -78,8 +78,10 @@ function installcask() {
 }
 
 installcask alfred
+installcask app-delete
 installcask bartender
-installcask colloquy
+installcask deluge
+installcask doxie
 installcask dropbox
 installcask evernote
 installcask gfxcardstatus
@@ -87,11 +89,21 @@ installcask google-chrome
 installcask instacast
 installcask istat-menus
 installcask iterm2
+installcask kaleidoscope
+installcask keyremap4macbook
+installcask macupdate-desktop
+installcask mplayerx
+installcask omni-focus
 installcask path-finder
+installcask pc-keyboardhack
 installcask postgres
+installcask powerkey
 installcask rdio
+installcask shuttle
+installcask skype
 installcask sublime-text
-installcask textmate2
+installcask textmate
 installcask the-unarchiver
 installcask vagrant
 installcask virtualbox
+installcask x-quartz

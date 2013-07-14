@@ -1,6 +1,5 @@
 # The basics
 gem install rails
-gem install thin
 gem install foreman
 gem install thor
 
@@ -8,7 +7,6 @@ gem install thor
 gem install annotate
 
 # Add pry to everything!
-gem install pry
 gem install pry-full
 
 # Manage Pow

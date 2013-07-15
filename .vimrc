@@ -27,6 +27,10 @@ if $SHELL =~ 'bin/fish'
   set shell=/bin/zsh
 endif
 
+" make `-` and `_` work like `o` and `O` without leaving you stuck in insert
+nnoremap - o<esc>
+nnoremap _ O<esc>
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Look, Style, and Feel

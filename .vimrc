@@ -216,3 +216,6 @@ nmap \e :NERDTreeToggle<CR>
 if executable("ag")
   set grepprg=ag\ --noheading\ --nogroup\ --nocolor
 endif
+
+" Generate ctags
+map <silent> <LocalLeader>rt :!ctags -R --exclude=".git\|.svn\|log\|tmp\|db\|pkg" --extra=+f<CR>

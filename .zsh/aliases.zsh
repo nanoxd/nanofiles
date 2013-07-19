@@ -8,6 +8,7 @@ alias .....="cd ../../../.."
 alias ~="cd ~"
 alias -- -="cd -"
 alias dev="cd ~/Developer/"
+alias md="mkdir -p"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -30,17 +31,19 @@ export LS_COLORS='no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40
 # -------------------------------------------------------------------
 # Git
 # -------------------------------------------------------------------
+alias g="git"
 alias ga='git add'
+alias gb='git branch'
+alias gc="git commit -v"
+alias gca="git commit -v --amend"
+alias gd='git difftool'
 alias gp='git push'
+alias gphm="git push heroku master"
+alias gpnew="git push --set-upstream origin master"
 alias gl='git log'
 alias gpl="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-alias gs='git status'
-alias gd='git diff'
-alias gm='git commit -m'
-alias gma='git commit -am'
-alias gb='git branch'
-alias gc='git checkout'
-alias gcb='git checkout -b'
+alias gs='git status -sb'
+alias gco='git checkout'
 alias gra='git remote add'
 alias gpu='git pull'
 alias gcl='git clone'
@@ -52,22 +55,31 @@ alias hb='hub browse'
 # -------------------------------------------------------------------
 # Homebrew
 # -------------------------------------------------------------------
-alias brewu="brew update; brew upgrade; brew cleanup"
 alias bci="brew cask install"
-alias bi="brew install"
 alias bcs="brew cask search"
+alias bi="brew install"
+alias brewu="brew update; brew upgrade; brew cleanup"
 
 # -------------------------------------------------------------------
 # Ruby/Rails
 # -------------------------------------------------------------------
+alias be="bundle exec"
 alias r="ruby"
-alias s="rspec"
+alias rc="rails console"
+alias rdtp="rails db:test:prepare"
 alias rg="rails generate"
 alias rgc="rails generate controller"
 alias rgm="rails generate model"
 alias rgmig="rails generate migration"
+alias rR="rails routes"
 alias rs="rails server"
-alias rc="rails console"
+alias s="rspec"
+
+# -------------------------------------------------------------------
+# External commands
+# -------------------------------------------------------------------
+alias st="subl"
+alias ytd="youtube-dl"
 
 # -------------------------------------------------------------------
 # Helper
@@ -80,5 +92,4 @@ alias update='sudo softwareupdate -i -a; npm update npm -g; npm update -g; sudo 
 alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
-alias ytd="youtube-dl"
 

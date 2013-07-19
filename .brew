@@ -85,6 +85,7 @@ installcask doxie
 installcask dropbox
 installcask evernote
 installcask gfxcardstatus
+installcask gifrocket
 installcask google-chrome
 installcask instacast
 installcask istat-menus
@@ -93,6 +94,7 @@ installcask kaleidoscope
 installcask keyremap4macbook
 installcask macupdate-desktop
 installcask mplayerx
+installcask nitrous-io
 installcask omni-focus
 installcask path-finder
 installcask pc-keyboardhack

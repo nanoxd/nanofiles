@@ -14,3 +14,4 @@ Program | Command | Description
 iTerm   | Hyper + T | Bring up full-screen terminal
 Inboard | Hyper + S | Screenshot selection
 Moom    | Hyper + M | Window resizing
+Moom    | Hyper + " | Move applications to fit two displays

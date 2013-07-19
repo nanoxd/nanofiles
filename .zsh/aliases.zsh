@@ -42,13 +42,32 @@ alias gb='git branch'
 alias gc='git checkout'
 alias gcb='git checkout -b'
 alias gra='git remote add'
-alias grr='git remote rm'
 alias gpu='git pull'
 alias gcl='git clone'
 alias gta='git tag -a -m'
 alias gf='git reflog'
 alias gv='git log --pretty=format:'%s' | cut -d " " -f 1 | sort | uniq -c | sort -nr'
 alias hb='hub browse'
+
+# -------------------------------------------------------------------
+# Homebrew
+# -------------------------------------------------------------------
+alias brewu="brew update; brew upgrade; brew cleanup"
+alias bci="brew cask install"
+alias bi="brew install"
+alias bcs="brew cask search"
+
+# -------------------------------------------------------------------
+# Ruby/Rails
+# -------------------------------------------------------------------
+alias r="ruby"
+alias s="rspec"
+alias rg="rails generate"
+alias rgc="rails generate controller"
+alias rgm="rails generate model"
+alias rgmig="rails generate migration"
+alias rs="rails server"
+alias rc="rails console"
 
 # -------------------------------------------------------------------
 # Helper
@@ -61,3 +80,5 @@ alias update='sudo softwareupdate -i -a; npm update npm -g; npm update -g; sudo 
 alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+alias ytd="youtube-dl"
+

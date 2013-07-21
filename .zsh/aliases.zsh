@@ -36,19 +36,19 @@ alias ga='git add'
 alias gb='git branch'
 alias gc="git commit -v"
 alias gca="git commit -v --amend"
+alias gcl='git clone'
+alias gco='git checkout'
 alias gd='git difftool'
+alias gf='git reflog'
+alias gfum="git fetch upstream && git merge upstream/master"
+alias gl='git log'
 alias gp='git push'
 alias gphm="git push heroku master"
 alias gpnew="git push --set-upstream origin master"
-alias gl='git log'
-alias gpl="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-alias gs='git status -sb'
-alias gco='git checkout'
-alias gra='git remote add'
 alias gpu='git pull'
-alias gcl='git clone'
+alias gra='git remote add'
+alias gs='git status -sb'
 alias gta='git tag -a -m'
-alias gf='git reflog'
 alias gv='git log --pretty=format:'%s' | cut -d " " -f 1 | sort | uniq -c | sort -nr'
 alias hb='hub browse'
 

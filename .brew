@@ -87,6 +87,7 @@ installcask evernote
 installcask gfxcardstatus
 installcask gifrocket
 installcask google-chrome
+installcask google-hangouts
 installcask instacast
 installcask istat-menus
 installcask iterm2

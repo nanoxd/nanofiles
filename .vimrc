@@ -1,7 +1,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let mapleader = " "
+let mapleader = ","
 
 set nocompatible " No reason to limit ourselves to vi compatibility
 set nobackup
@@ -31,15 +31,100 @@ endif
 nnoremap - o<esc>
 nnoremap _ O<esc>
 
+if exists('$TMUX')
+    set clipboard=
+  else
+    set clipboard=unnamed                             "sync with OS clipboard
+endif
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Bundles && Bundle Specific Settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Declare bundles are handled via Vundle
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" Let Vundle manage Vundle
+Bundle 'gmarik/vundle'
+
+" Define bundles via Github repos
+
+" Languages
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'tpope/vim-cucumber'
+Bundle 'elixir-lang/vim-elixir'
+Bundle 'vim-scripts/fish-syntax'
+Bundle 'tpope/vim-git'
+Bundle 'jnwhiteh/vim-golang'
+Bundle 'tpope/vim-haml'
+Bundle 'wlangstroth/vim-haskell'
+Bundle 'xenoterracide/html.vim'
+Bundle 'vim-scripts/HTML-AutoCloseTag'
+Bundle 'jelera/vim-javascript-syntax'
+Bundle 'tpope/vim-markdown'
+Bundle 'thiderman/nginx-vim-syntax'
+Bundle 'b4winckler/vim-objc'
+Bundle 'ajf/puppet-vim'
+Bundle 'tpope/vim-rails'
+Bundle 'skwp/vim-rspec'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'sunaku/vim-ruby-minitest'
+Bundle "aaronjensen/vim-sass-status.git"
+Bundle 'cakebaker/scss-syntax.vim'
+
+"Tools
+Bundle 'vim-scripts/ctags.vim'
+Bundle 'kien/ctrlp.vim'
+"Adds automatic closing of quotes, parenthesis, brackts, etc.
+Bundle 'raimondi/delimitmate'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-fugitive'
+Bundle 'mattn/gist-vim'
+Bundle 'vim-scripts/greplace.vim'
+Bundle 'tsaleh/vim-matchit'
+"File Management
+Bundle 'scrooloose/nerdtree'
+Bundle 'danro/rename.vim'
+"Zen Coding for VIM
+Bundle 'tristen/vim-sparkup'
+Bundle 'tpope/vim-surround'
+"VIM Syntax Linter
+Bundle 'scrooloose/syntastic'
+"Text filtering and alignment
+Bundle 'godlygeek/tabular'
+Bundle 'vim-scripts/tComment'
+Bundle 'timcharper/textile.vim'
+Bundle 'nanki/treetop.vim'
+
+"Colors
+Bundle 'tomasr/molokai'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'd11wtq/tomorrow-theme-vim'
+Bundle 'bling/vim-airline'
+Bundle 'vim-scripts/wombat256.vim'
+
+
+
+"" CtrlP
+" Adds ; as the Ctrl+P fuzzy search
+nmap ; :CtrlPBuffer<CR>
+" Show the damn dotfiles
+let g:ctrlp_show_hidden = 1
+
+"" NERDTree
+nmap \e :NERDTreeToggle<CR>
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Look, Style, and Feel
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 syntax enable
-colorscheme Tomorrow-Night-Bright
-set rtp+=~/Developer/Code/powerline/powerline/bindings/vim
-let g:Powerline_symbols = 'fancy'
+colorscheme solarized
+set background=dark
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'solarized'
 
 " Whitespace defaults
 set nowrap
@@ -130,82 +215,7 @@ nnoremap <C-n> :call NumberToggle()<cr>
 " Snippets are activated by Shift+Tab
 let g:snippetsEmu_key = "<S-Tab>"
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Bundles && Bundle Specific Settings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Declare bundles are handled via Vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" Let Vundle manage Vundle
-Bundle 'gmarik/vundle'
-
-" Define bundles via Github repos
-
-" Languages
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'tpope/vim-cucumber'
-Bundle 'elixir-lang/vim-elixir'
-Bundle 'vim-scripts/fish-syntax'
-Bundle 'tpope/vim-git'
-Bundle 'jnwhiteh/vim-golang'
-Bundle 'tpope/vim-haml'
-Bundle 'wlangstroth/vim-haskell'
-Bundle 'xenoterracide/html.vim'
-Bundle 'vim-scripts/HTML-AutoCloseTag'
-Bundle 'jelera/vim-javascript-syntax'
-Bundle 'tpope/vim-markdown'
-Bundle 'thiderman/nginx-vim-syntax'
-Bundle 'b4winckler/vim-objc'
-Bundle 'ajf/puppet-vim'
-Bundle 'tpope/vim-rails'
-Bundle 'skwp/vim-rspec'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'sunaku/vim-ruby-minitest'
-Bundle "aaronjensen/vim-sass-status.git"
-Bundle 'cakebaker/scss-syntax.vim'
-
-"Tools
-Bundle 'vim-scripts/ctags.vim'
-Bundle 'kien/ctrlp.vim'
-"Adds automatic closing of quotes, parenthesis, brackts, etc.
-Bundle 'raimondi/delimitmate'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-fugitive'
-Bundle 'mattn/gist-vim'
-Bundle 'vim-scripts/greplace.vim'
-Bundle 'tsaleh/vim-matchit'
-"File Management
-Bundle 'scrooloose/nerdtree'
-Bundle 'danro/rename.vim'
-"Zen Coding for VIM
-Bundle 'tristen/vim-sparkup'
-Bundle 'tpope/vim-surround'
-"VIM Syntax Linter
-Bundle 'scrooloose/syntastic'
-"Text filtering and alignment
-Bundle 'godlygeek/tabular'
-Bundle 'vim-scripts/tComment'
-Bundle 'timcharper/textile.vim'
-Bundle 'nanki/treetop.vim'
-
-"Colors
-Bundle 'tomasr/molokai'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'd11wtq/tomorrow-theme-vim'
-Bundle 'vim-scripts/wombat256.vim'
-
-
-
-"" CtrlP
-" Adds ; as the Ctrl+P fuzzy search
-nmap ; :CtrlPBuffer<CR>
-" Show the damn dotfiles
-let g:ctrlp_show_hidden = 1
-
-"" NERDTree
-nmap \e :NERDTreeToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files and backups

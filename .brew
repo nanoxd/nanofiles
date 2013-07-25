@@ -23,11 +23,11 @@ brew install reattach-to-user-namespace
 
 # Install version control systems
 brew install git
+brew install mercurial
 # Add git ncurses gui for log view
 brew install tig
 # Extend git with github
 brew install hub
-brew install mercurial
 
 # Install database systems
 brew install redis
@@ -51,6 +51,7 @@ brew install vim
 brew install heroku-toolbelt
 brew install watch
 brew install tree
+brew install mosh
 
 # Add global search
 brew install the_silver_searcher

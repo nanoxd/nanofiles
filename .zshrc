@@ -1,5 +1,9 @@
 ##### ZSH Config #####
 
+## General ##
+
+
+
 ## Set Path ##
 
 export PATH=/usr/local/bin:/usr/bin:/usr/local/share/python:/bin:/usr/sbin:/sbin:

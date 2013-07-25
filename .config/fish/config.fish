@@ -30,3 +30,7 @@ set -g -x DISABLE_AUTO_TITLE true
 function ..; cd ..; end
 function ...; cd ../..; end
 function ....; cd ../../..; end
+
+function gcb
+  git create-branch $argv
+end

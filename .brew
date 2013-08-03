@@ -81,6 +81,8 @@ function installcask() {
 installcask alfred
 installcask app-delete
 installcask bartender
+installcask calibre
+installcask cloudapp
 installcask deluge
 installcask doxie
 installcask dropbox
@@ -101,7 +103,8 @@ installcask omni-focus
 installcask path-finder
 installcask pc-keyboardhack
 installcask postgres
-installcask powerkey
+installcask power-key
+installcask pupil
 installcask rdio
 installcask shuttle
 installcask skype
@@ -109,6 +112,7 @@ installcask sourcetree
 installcask sublime-text
 installcask textmate
 installcask the-unarchiver
+installcask true-crypt
 installcask vagrant
 installcask virtualbox
 installcask x-quartz

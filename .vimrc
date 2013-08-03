@@ -37,6 +37,13 @@ if exists('$TMUX')
     set clipboard=unnamed                             "sync with OS clipboard
 endif
 
+" Yank text to the OS X clipboard
+noremap <leader>y "*y
+noremap <leader>yy "*Y
+
+" Preserve indentation while pasting text from the OS X clipboard
+noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Bundles && Bundle Specific Settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -73,31 +80,32 @@ Bundle 'sunaku/vim-ruby-minitest'
 Bundle "aaronjensen/vim-sass-status.git"
 Bundle 'cakebaker/scss-syntax.vim'
 
-"Tools
+" Tools
 Bundle 'vim-scripts/ctags.vim'
 Bundle 'kien/ctrlp.vim'
-"Adds automatic closing of quotes, parenthesis, brackts, etc.
-Bundle 'raimondi/delimitmate'
+" Adds automatic closing of quotes
+Bundle "Raimondi/delimitMate"
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
 Bundle 'mattn/gist-vim'
 Bundle 'vim-scripts/greplace.vim'
 Bundle 'tsaleh/vim-matchit'
-"File Management
+Bundle 'benmills/vimux'
+" File Management
 Bundle 'scrooloose/nerdtree'
 Bundle 'danro/rename.vim'
-"Zen Coding for VIM
+" Zen Coding for VIM
 Bundle 'tristen/vim-sparkup'
 Bundle 'tpope/vim-surround'
-"VIM Syntax Linter
+" VIM Syntax Linter
 Bundle 'scrooloose/syntastic'
-"Text filtering and alignment
+" Text filtering and alignment
 Bundle 'godlygeek/tabular'
 Bundle 'vim-scripts/tComment'
 Bundle 'timcharper/textile.vim'
 Bundle 'nanki/treetop.vim'
 
-"Colors
+" Colors
 Bundle 'tomasr/molokai'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'd11wtq/tomorrow-theme-vim'

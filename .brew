@@ -105,6 +105,7 @@ installcask pc-keyboardhack
 installcask postgres
 installcask power-key
 installcask pupil
+installcask quick-cast
 installcask rdio
 installcask shuttle
 installcask skype

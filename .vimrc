@@ -124,6 +124,9 @@ let g:ctrlp_show_hidden = 1
 nmap \e :NERDTreeToggle<CR>
 
 
+"" Vimux
+nnoremap <leader>tt :VimuxRunLastCommand<CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Look, Style, and Feel
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -237,3 +240,8 @@ endif
 
 " Generate ctags
 nmap <silent> <LocalLeader>rt :!ctags -R --exclude=".git\|.svn\|log\|tmp\|db\|pkg" --extra=+f<CR>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Files and backups
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

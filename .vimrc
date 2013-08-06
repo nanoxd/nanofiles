@@ -83,6 +83,7 @@ Bundle 'cakebaker/scss-syntax.vim'
 " Tools
 Bundle 'vim-scripts/ctags.vim'
 Bundle 'kien/ctrlp.vim'
+Bundle 'thoughtbot/vim-rspec'
 " Adds automatic closing of quotes
 Bundle "Raimondi/delimitMate"
 Bundle 'tpope/vim-endwise'
@@ -124,8 +125,10 @@ let g:ctrlp_show_hidden = 1
 nmap \e :NERDTreeToggle<CR>
 
 
-"" Vimux
-nnoremap <leader>tt :VimuxRunLastCommand<CR>
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Look, Style, and Feel
@@ -150,7 +153,7 @@ set list
 function! s:setupWrapping()
   set wrap
   set wrapmargin=2
-  set textwidth=72
+  set textwidth=78
 endfunction
 
 """"Language specific whitespace
@@ -159,7 +162,7 @@ endfunction
 au FileType make set noexpandtab
 
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
-au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}  set ft=ruby
+au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Procfile,Thorfile,config.ru}  set ft=ruby
 
 " Set Sass files as sass
  au BufRead,BufNewFile *.scss set filetype=scss
@@ -181,7 +184,7 @@ au BufRead,BufNewFile *.md set filetype=markdown
 au BufRead,BufNewFile *.md setlocal spell
 
 " Set syntax for Go
-au BufRead,BufNewFile *.go set filetype=go
+au BufRead,BufNewFile *.go set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start

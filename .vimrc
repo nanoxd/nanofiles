@@ -68,7 +68,8 @@ Bundle 'tpope/vim-haml'
 Bundle 'wlangstroth/vim-haskell'
 Bundle 'xenoterracide/html.vim'
 Bundle 'vim-scripts/HTML-AutoCloseTag'
-Bundle 'jelera/vim-javascript-syntax'
+Bundle 'pangloss/vim-javascript'
+Bundle 'leshill/vim-json'
 Bundle 'tpope/vim-markdown'
 Bundle 'thiderman/nginx-vim-syntax'
 Bundle 'b4winckler/vim-objc'
@@ -166,9 +167,6 @@ au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Procfile,Thorfile,config.ru}
 
 " Set Sass files as sass
  au BufRead,BufNewFile *.scss set filetype=scss
-
-" add json syntax highlighting
-au BufNewFile,BufRead *.json set ft=javascript
 
 au BufRead,BufNewFile *.txt call s:setupWrapping()
 

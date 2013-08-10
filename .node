@@ -1,0 +1,8 @@
+function npm() {
+  npm install -g "${@}"
+}
+
+npm bower
+npm jasmine
+npm grunt
+

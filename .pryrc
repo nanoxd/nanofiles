@@ -1,7 +1,7 @@
 ### From YADR dotfiles
 
 # === EDITOR ===
-Pry.editor = 'vi'
+Pry.editor = 'vim'
 
 # == Pry-Nav - Using pry as a debugger ==
 Pry.commands.alias_command 'c', 'continue' rescue nil

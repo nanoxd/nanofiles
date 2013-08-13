@@ -1,8 +1,9 @@
 {
 	"auto_complete_commit_on_tab": true,
 	"bold_folder_labels": true,
-	"color_scheme": "Packages/MadeToCode/MadeToCode.tmTheme",
+	"color_scheme": "Packages/Solarized Color Scheme/Solarized (dark).tmTheme",
 	"draw_white_space": "all",
+	"soda_folder_icons": true,
 	"ensure_newline_at_eof_on_save": true,
 	"file_exclude_patterns":
 	[
@@ -65,7 +66,7 @@
 	],
 	"save_on_focus_lost": true,
 	"tab_size": 2,
-	"theme": "Soda Dark.sublime-theme",
+	"theme": "Soda Dark 3.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"vintage_start_in_command_mode": true

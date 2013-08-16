@@ -44,6 +44,9 @@ noremap <leader>yy "*Y
 " Preserve indentation while pasting text from the OS X clipboard
 noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
 
+" Fast saving
+map <leader>w :w<cr>
+
 " Tab completion
 " will insert tab at beginning of line,
 " will use completion if not at beginning
@@ -118,7 +121,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/syntastic'
 " Text filtering and alignment
 Bundle 'godlygeek/tabular'
-Bundle 'vim-scripts/tComment'
+Bundle 'tomtom/tcomment_vim'
 Bundle 'timcharper/textile.vim'
 Bundle 'nanki/treetop.vim'
 

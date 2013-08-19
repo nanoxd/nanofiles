@@ -1,3 +1,6 @@
 [submodule "Sublime Text/Packages/Theme - Soda"]
 	path = Sublime Text/Packages/Theme - Soda
 	url = https://github.com/buymeasoda/soda-theme.git
+[submodule "prezto"]
+	path = prezto
+	url = https://github.com/sorin-ionescu/prezto.git

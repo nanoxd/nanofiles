@@ -36,6 +36,7 @@ alias ga='git add'
 alias gb='git branch'
 alias gc="git commit -v"
 alias gca="git commit -v --amend"
+alias gcb="git create-branch"
 alias gcl='git clone'
 alias gco='git checkout'
 alias gd='git difftool'
@@ -82,11 +83,12 @@ alias st="subl"
 alias ytd="youtube-dl"
 
 # -------------------------------------------------------------------
-# Helper
+# Helpers
 # -------------------------------------------------------------------
+alias df='df -h'            # Disk free, in gigabytes, not bytes
 alias du='du -h -c'         # Calculate total disk usage for a folder
 alias oo='open .'           # open current directory in OS X Finder
-# Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
+# Get OS X Software Updates, and update installed npm, and their installed packages
 alias update='sudo softwareupdate -i -a; npm update npm -g; npm update -g; sudo gem update'
 # Clean up LaunchServices to remove duplicates in the “Open With” menu
 alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"

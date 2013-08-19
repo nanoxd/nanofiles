@@ -166,8 +166,8 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 " Show “invisible” characters
-set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set list
+set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 
 function! s:setupWrapping()
   set wrap

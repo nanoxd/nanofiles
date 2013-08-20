@@ -52,6 +52,8 @@ brew install heroku-toolbelt
 brew install watch
 brew install tree
 brew install mosh
+brew install libmpdclient
+
 
 # Add global search
 brew install the_silver_searcher

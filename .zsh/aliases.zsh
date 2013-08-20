@@ -31,26 +31,25 @@ export LS_COLORS='no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40
 # -------------------------------------------------------------------
 # Git
 # -------------------------------------------------------------------
-alias g="git"
-alias ga='git add'
-alias gb='git branch'
-alias gc="git commit -v"
-alias gca="git commit -v --amend"
+# alias g="git"
+# alias ga='git add'
+# alias gb='git branch'
+# alias gc="git commit -v"
+# alias gca="git commit -v --amend"
 alias gcb="git create-branch"
-alias gcl='git clone'
-alias gco='git checkout'
-alias gd='git difftool'
-alias gf='git reflog'
-alias gfum="git fetch upstream && git merge upstream/master"
-alias gl='git log'
-alias gp='git push'
-alias gphm="git push heroku master"
-alias gpnew="git push --set-upstream origin master"
-alias gpu='git pull'
-alias gra='git remote add'
-alias gs='git status -sb'
-alias gta='git tag -a -m'
-alias gv='git log --pretty=format:'%s' | cut -d " " -f 1 | sort | uniq -c | sort -nr'
+# alias gcl='git clone'
+# alias gco='git checkout'
+# alias gd='git difftool'
+# alias gfum="git fetch upstream && git merge upstream/master"
+# alias gl='git log'
+# alias gp='git push'
+# alias gphm="git push heroku master"
+# alias gpnew="git push --set-upstream origin master"
+# alias gpu='git pull'
+# alias gra='git remote add'
+# alias gs='git status -sb'
+# alias gta='git tag -a -m'
+# alias gv='git log --pretty=format:'%s' | cut -d " " -f 1 | sort | uniq -c | sort -nr'
 alias hb='hub browse'
 
 # -------------------------------------------------------------------

@@ -12,15 +12,13 @@ export LC_ALL="en_US.UTF-8"
 export TERM=xterm-256color
 export LESS='-i -r'
 export PAGER='less'
-export GREP_OPTIONS='--color=auto'
-
 
 
 ## History ##
 export HISTIGNORE="ls:ll:la:l:clear:cd:cd -:pwd:exit:date:* --help" # Make some commands not show up in history
 export HISTCONTROL=erasedups  # Ignore duplicate entries in history
 export HISTSIZE=10000
-export  HISTFILE=~/.zsh_history
+export HISTFILE=~/.zsh_history
 
 
 

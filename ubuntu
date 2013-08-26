@@ -1,0 +1,33 @@
+#!/bin/zsh
+
+# Ensure everything is up to date
+sudo apt-get update
+sudo apt-get upgrade
+
+# Install the basics
+sudo apt-get install curl git-core vim zsh tmux
+
+# Install RVM
+curl -L get.rvm.io | bash -s stable
+source ~/.rvm/scripts/rvm
+rvm requirements
+rvm install 2.0.0
+rvm --default use 2.0.0
+
+# Install PostgreSQL
+sudo apt-get install postgresql
+
+# Install Mosh
+sudo apt-get install software-properties-common
+sudo apt-get install python-software-properties
+sudo add-apt-repository ppa:keithw/mosh
+sudo apt-get update
+sudo apt-get install mosh
+
+# Install Redis
+sudo add-apt-repository ppa:chris-lea/redis-server
+sudo apt-get update
+sudo apt-get install redis-server monit
+
+# Generate SSH
+ssh-keygen -t rsa -C "nano@fdp.io"

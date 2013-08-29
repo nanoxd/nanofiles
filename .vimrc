@@ -23,10 +23,6 @@ autocmd! bufwritepost .vimrc source ~/.vimrc
 
 nnoremap <leader>ev :edit ~/.vimrc<cr>
 
-if $SHELL =~ 'bin/fish'
-  set shell=/bin/zsh
-endif
-
 " make `-` and `_` work like `o` and `O` without leaving you stuck in insert
 nnoremap - o<esc>
 nnoremap _ O<esc>
@@ -93,7 +89,6 @@ Bundle 'thiderman/nginx-vim-syntax'
 Bundle 'b4winckler/vim-objc'
 Bundle 'ajf/puppet-vim'
 Bundle 'tpope/vim-rails'
-Bundle 'skwp/vim-rspec'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'sunaku/vim-ruby-minitest'
 Bundle "aaronjensen/vim-sass-status.git"
@@ -143,7 +138,7 @@ let g:ctrlp_show_hidden = 1
 "" NERDTree
 nmap \e :NERDTreeToggle<CR>
 
-
+let g:rspec_command = "!bundle exec rspec {spec}"
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>

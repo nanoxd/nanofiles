@@ -2,6 +2,7 @@ function npm() {
   npm install -g "${@}"
 }
 
+npm coffee-script
 npm bower
 npm jasmine
 npm grunt

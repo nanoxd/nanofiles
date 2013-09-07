@@ -105,20 +105,17 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'mattn/gist-vim'
 Bundle 'vim-scripts/greplace.vim'
 Bundle 'tsaleh/vim-matchit'
+Bundle 'SirVer/ultisnips'
 Bundle 'benmills/vimux'
 " File Management
 Bundle 'scrooloose/nerdtree'
 Bundle 'danro/rename.vim'
-" Zen Coding for VIM
-Bundle 'tristen/vim-sparkup'
 Bundle 'tpope/vim-surround'
 " VIM Syntax Linter
 Bundle 'scrooloose/syntastic'
 " Text filtering and alignment
 Bundle 'godlygeek/tabular'
 Bundle 'tomtom/tcomment_vim'
-Bundle 'timcharper/textile.vim'
-Bundle 'nanki/treetop.vim'
 
 " Colors
 Bundle 'tomasr/molokai'
@@ -138,7 +135,7 @@ let g:ctrlp_show_hidden = 1
 "" NERDTree
 nmap \e :NERDTreeToggle<CR>
 
-let g:rspec_command = "!bundle exec rspec {spec}"
+let g:rspec_command = "!rspec {spec}"
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
@@ -237,8 +234,6 @@ function! NumberToggle()
 endfunc
 
 nnoremap <C-n> :call NumberToggle()<cr>
-" Snippets are activated by Shift+Tab
-let g:snippetsEmu_key = "<S-Tab>"
 
 
 

@@ -13,7 +13,6 @@ brew install findutils
 
 # Install Bash 4 & fishfish
 brew install bash
-brew install fish
 
 # Install wget with IRI support
 brew install wget --enable-iri
@@ -33,18 +32,17 @@ brew install hub
 brew install redis
 brew install sqlite
 
-# Install the languages
+## Languages ##
 brew install node
 brew install python3
 brew install python
 brew install go
-
 # Install Elixir
 brew tap homebrew/versions
 brew install erlang-r16
 brew install elixir
 
-# Install other useful binaries
+## Install other useful binaries ##
 brew install tmux
 brew install ctags
 brew install vim
@@ -53,24 +51,18 @@ brew install watch
 brew install tree
 brew install mosh
 brew install libmpdclient
-
-
-# Add global search
+# Interactive process viewer
+brew install htop
+# Global search
 brew install the_silver_searcher
-
-# Add colors to the terminal
+# Colors to the terminal
 brew install grc
-
 # Add media manipulation
 brew install youtube-dl
-
-# Add an interactive process viewer
-brew install htop
 
 # Install native apps
 brew tap phinze/homebrew-cask
 brew install brew-cask
-
 
 function installcask() {
   if brew cask info "${@}" | grep "Not installed" > /dev/null; then
@@ -90,7 +82,6 @@ installcask doxie
 installcask dropbox
 installcask evernote
 installcask gfxcardstatus
-installcask gifrocket
 installcask google-chrome
 installcask google-hangouts
 installcask instacast

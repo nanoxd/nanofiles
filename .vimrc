@@ -141,6 +141,8 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
+" Move between buffers
+map <Leader>b :bnext<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Look, Style, and Feel
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -150,6 +152,7 @@ colorscheme solarized
 set background=dark
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'solarized'
+let g:airline#extensions#tabline#enabled = 1
 
 " Whitespace defaults
 set nowrap
@@ -248,7 +251,7 @@ if executable("ag")
 endif
 
 " Generate ctags
-nmap <silent> <LocalLeader>rt :!ctags -R --exclude=".git\|.svn\|log\|tmp\|db\|pkg" --extra=+f<CR>
+nmap <silent> <leader>rt :!ctags -R --exclude=".git\|.svn\|log\|tmp\|db\|pkg" --extra=+f<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

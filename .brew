@@ -45,6 +45,7 @@ brew install elixir
 ## Install other useful binaries ##
 brew install tmux
 brew install ctags
+brew install cmake
 brew install vim
 brew install heroku-toolbelt
 brew install watch

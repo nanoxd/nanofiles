@@ -116,6 +116,7 @@ Bundle 'scrooloose/syntastic'
 " Text filtering and alignment
 Bundle 'godlygeek/tabular'
 Bundle 'tomtom/tcomment_vim'
+Bundle 'Valloric/YouCompleteMe'
 
 " Colors
 Bundle 'tomasr/molokai'
@@ -143,6 +144,10 @@ map <Leader>a :call RunAllSpecs()<CR>
 
 " Move between buffers
 map <Leader>b :bnext<CR>
+
+" Change default keys for SnipMate
+imap <C-J> <Plug>snipMateNextOrTrigger
+smap <C-J> <Plug>snipMateNextOrTrigger
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Look, Style, and Feel
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

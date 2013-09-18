@@ -29,6 +29,7 @@ db/*.sqlite3
 
 # Ruby specific
 vendor/bundler_gems
+.vagrant/
 zeus.json
 
 # ctags

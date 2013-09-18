@@ -155,6 +155,8 @@ smap <C-J> <Plug>snipMateNextOrTrigger
 syntax enable
 colorscheme solarized
 set background=dark
+let g:solarized_termcolors=16
+call togglebg#map("<F5>")
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'solarized'
 let g:airline#extensions#tabline#enabled = 1

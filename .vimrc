@@ -116,8 +116,11 @@ Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/syntastic'
 " Text filtering and alignment
 Bundle 'godlygeek/tabular'
+Bundle 'kana/vim-textobj-user'
+Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'graudeejs/vim-matchit'
 
 " Colors
 Bundle 'tomasr/molokai'

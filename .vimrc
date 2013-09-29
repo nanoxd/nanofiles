@@ -149,9 +149,9 @@ map <Leader>a :call RunAllSpecs()<CR>
 " Move between buffers
 map <Leader>b :bnext<CR>
 
-" Change default keys for SnipMate
-imap <C-J> <Plug>snipMateNextOrTrigger
-smap <C-J> <Plug>snipMateNextOrTrigger
+" Change default keys for UltiSnips
+let g:UltiSnipsExpandTrigger="<F1>"
+let g:UltiSnipsJumpForwardTrigger="<F2>"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Look, Style, and Feel
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

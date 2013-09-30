@@ -66,40 +66,37 @@ brew tap phinze/homebrew-cask
 brew install brew-cask
 
 function installcask() {
-  if brew cask info "${@}" | grep "Not installed" > /dev/null; then
-    brew cask install "${@}"
-  else
-    echo "${@} is already installed."
-  fi
+  brew cask install "${@}" 2> /dev/null
 }
 
+
+installcask dropbox
+installcask pc-keyboardhack
+installcask keyremap4macbook
+installcask iterm2
 installcask alfred
-installcask app-delete
+installcask google-chrome
+installcask x-quartz
 installcask bartender
+installcask postgres
+installcask virtualbox
+installcask vagrant
 installcask calibre
 installcask cloudapp
-installcask deluge
+installcask app-delete
 installcask doxie
-installcask dropbox
 installcask evernote
 installcask gfxcardstatus
-installcask google-chrome
 installcask google-hangouts
 installcask instacast
 installcask istat-menus
-installcask iterm2
 installcask kaleidoscope
-installcask keyremap4macbook
 installcask macupdate-desktop
 installcask mplayerx
 installcask nitrous-io
 installcask omni-focus
 installcask path-finder
-installcask pc-keyboardhack
-installcask postgres
-installcask power-key
 installcask pupil
-installcask quick-cast
 installcask rdio
 installcask shuttle
 installcask skype
@@ -108,6 +105,3 @@ installcask sublime-text
 installcask textmate
 installcask the-unarchiver
 installcask true-crypt
-installcask vagrant
-installcask virtualbox
-installcask x-quartz

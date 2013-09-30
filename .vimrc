@@ -15,6 +15,8 @@ set incsearch " Do incremental searching
 set noshowmode " Hide the default mode text
 set rnu
 set hls
+set relativenumber
+set number
 
 " Set encoding
 set encoding=utf-8
@@ -238,18 +240,6 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
-
-function! NumberToggle()
-  if(&relativenumber == 1)
-    set number
-  else
-    set relativenumber
-  endif
-endfunc
-
-nnoremap <C-n> :call NumberToggle()<cr>
-
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files and backups

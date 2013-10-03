@@ -2,12 +2,14 @@
 gem install rails
 gem install foreman
 gem install thor
+# Tmux management
+gem install teamocil
 
 # Include schemas in models
 gem install annotate
 
 # Add pry to everything!
-gem install pry-full
+gem install jazz_hands
 
 # Manage Pow
 gem install powify

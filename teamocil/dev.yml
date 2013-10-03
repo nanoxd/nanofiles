@@ -1,0 +1,22 @@
+session:
+  name: "dev"
+  windows:
+    - name: "dotfiles"
+      root: "~/Developer/Code/nanofiles"
+      panes:
+        - cmd: "ls"
+    - name: "cask"
+      root: "~/Developer/Projects/homebrew-cask"
+      layout: even-horizontal
+      panes:
+        - cmd: "gfum"
+        - cmd: "cd ~/Downloads"
+    - name: "boxylib"
+      root: "~/Developer/Projects/boxylib"
+      layout: main-horizontal
+      filters:
+        before: "source ~/Dropbox/.secrets"
+      panes:
+        - cmd: "e ."
+        - cmd: "rorc"
+        - cmd: "rors"

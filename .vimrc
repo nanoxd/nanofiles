@@ -123,6 +123,7 @@ Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'graudeejs/vim-matchit'
+Bundle 'christoomey/vim-tmux-navigator'
 
 " Colors
 Bundle 'tomasr/molokai'

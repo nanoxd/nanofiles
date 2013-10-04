@@ -11,12 +11,3 @@ session:
       panes:
         - cmd: "gfum"
         - cmd: "cd ~/Downloads"
-    - name: "boxylib"
-      root: "~/Developer/Projects/boxylib"
-      layout: main-horizontal
-      filters:
-        before: "source ~/Dropbox/.secrets"
-      panes:
-        - cmd: "e ."
-        - cmd: "rorc"
-        - cmd: "rors"

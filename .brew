@@ -56,6 +56,7 @@ brew install libmpdclient
 brew install htop
 # Global search
 brew install the_silver_searcher
+brew install ack
 # Colors to the terminal
 brew install grc
 # Add media manipulation
@@ -81,7 +82,6 @@ installcask bartender
 installcask postgres
 installcask virtualbox
 installcask vagrant
-installcask calibre
 installcask cloudapp
 installcask app-delete
 installcask doxie
@@ -97,6 +97,7 @@ installcask nitrous-io
 installcask omni-focus
 installcask path-finder
 installcask pupil
+installcask racket
 installcask rdio
 installcask shuttle
 installcask skype

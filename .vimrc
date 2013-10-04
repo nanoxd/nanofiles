@@ -124,6 +124,7 @@ Bundle 'tomtom/tcomment_vim'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'graudeejs/vim-matchit'
 Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'mattboehm/vim-unstack'
 
 " Colors
 Bundle 'tomasr/molokai'
@@ -155,6 +156,9 @@ map <Leader>b :bnext<CR>
 " Change default keys for UltiSnips
 let g:UltiSnipsExpandTrigger="<F1>"
 let g:UltiSnipsJumpForwardTrigger="<F2>"
+
+" Change default key for vim-unstack
+let g:unstack_mapkey="<F4>"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Look, Style, and Feel
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

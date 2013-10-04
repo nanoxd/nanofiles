@@ -11,7 +11,7 @@ echo "Don’t forget to add $(brew --prefix coreutils)/libexec/gnubin to \$PATH.
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
 brew install findutils
 
-# Install Bash 4 & fishfish
+# Install Bash 4
 brew install bash
 
 # Install wget with IRI support
@@ -102,6 +102,5 @@ installcask shuttle
 installcask skype
 installcask sourcetree
 installcask sublime-text
-installcask textmate
 installcask the-unarchiver
 installcask true-crypt

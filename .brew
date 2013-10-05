@@ -38,8 +38,7 @@ brew install python3
 brew install python
 brew install go
 # Install Elixir
-brew tap homebrew/versions
-brew install erlang-r16
+brew install erlang
 brew install elixir
 
 ## Install other useful binaries ##

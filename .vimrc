@@ -72,8 +72,6 @@ call vundle#rc()
 " Let Vundle manage Vundle
 Bundle 'gmarik/vundle'
 
-" Define bundles via Github repos
-
 " Languages
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-cucumber'
@@ -167,7 +165,6 @@ let g:unstack_mapkey="<F4>"
 syntax enable
 colorscheme solarized
 set background=dark
-let g:solarized_termcolors=16
 call togglebg#map("<F5>")
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'solarized'

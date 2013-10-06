@@ -124,6 +124,8 @@ Bundle 'tomtom/tcomment_vim'
 Bundle 'graudeejs/vim-matchit'
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'mattboehm/vim-unstack'
+Bundle 'rizzatti/funcoo.vim'
+Bundle 'rizzatti/dash.vim'
 
 " Colors
 Bundle 'tomasr/molokai'

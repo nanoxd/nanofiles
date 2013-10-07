@@ -124,15 +124,12 @@ Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'mattboehm/vim-unstack'
 Bundle 'rizzatti/funcoo.vim'
 Bundle 'rizzatti/dash.vim'
+Bundle 'tpope/vim-repeat'
 
 " Colors
-Bundle 'tomasr/molokai'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'd11wtq/tomorrow-theme-vim'
 Bundle 'bling/vim-airline'
-Bundle 'vim-scripts/wombat256.vim'
-
-
 
 "" CtrlP
 " Adds ; as the Ctrl+P fuzzy search

@@ -90,10 +90,12 @@ Bundle 'thiderman/nginx-vim-syntax'
 Bundle 'b4winckler/vim-objc'
 Bundle 'ajf/puppet-vim'
 Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-rake'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'sunaku/vim-ruby-minitest'
 Bundle "aaronjensen/vim-sass-status.git"
 Bundle 'cakebaker/scss-syntax.vim'
+Bundle 'tpope/vim-bundler'
 
 " Tools
 Bundle 'vim-scripts/ctags.vim'

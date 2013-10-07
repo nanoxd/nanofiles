@@ -29,11 +29,12 @@
   excludesfile = ~/.gitignore
   editor = vim
 
+[github]
+  user = nanoxd
+
 [format]
   pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
 [diff]
-	tool = vimdiff
-[merge]
-	tool = vimdiff
+  tool = vimdiff
 [mergetool]
 	prompt = false

@@ -13,3 +13,6 @@ gem install jazz_hands
 
 # Manage Pow
 gem install powify
+
+# Automatic Tags for Gems
+gem install gem-ctags

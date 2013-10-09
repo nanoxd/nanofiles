@@ -24,6 +24,7 @@
   pn = push --set-upstream origin master
   rebase-origin = !git fetch origin && git rebase origin/master
   st = status
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 
 [core]
   excludesfile = ~/.gitignore

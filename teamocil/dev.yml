@@ -9,5 +9,5 @@ session:
       root: "~/Developer/Projects/homebrew-cask"
       layout: even-horizontal
       panes:
-        - cmd: "gfum"
+        - cmd: "echo 'Chatori?'"
         - cmd: "cd ~/Downloads"

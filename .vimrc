@@ -255,8 +255,3 @@ endif
 
 " Generate ctags
 nmap <silent> <leader>rt :!ctags -R --exclude=".git\|.svn\|log\|tmp\|db\|pkg" --extra=+f<CR>
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Files and backups
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

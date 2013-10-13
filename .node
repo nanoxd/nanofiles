@@ -6,4 +6,4 @@ npm coffee-script
 npm bower
 npm jasmine
 npm grunt
-
+npm jsonlint

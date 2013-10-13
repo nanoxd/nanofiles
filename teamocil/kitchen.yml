@@ -1,0 +1,7 @@
+session:
+  name: "dev"
+  windows:
+    - name: "kitchenplan"
+      root: "~/Developer/Projects/kitchenplan"
+      panes:
+        - cmd: "e ."

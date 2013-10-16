@@ -85,13 +85,10 @@ installcask cloudapp
 installcask app-delete
 installcask doxie
 installcask evernote
-installcask gfxcardstatus
 installcask google-hangouts
 installcask instacast
 installcask istat-menus
 installcask kaleidoscope
-installcask macupdate-desktop
-installcask mplayerx
 installcask nitrous-io
 installcask omni-focus
 installcask path-finder

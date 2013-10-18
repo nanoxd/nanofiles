@@ -1,0 +1,7 @@
+session:
+  name: "dev"
+  windows:
+    - name: "automation"
+      root: "~/Developer/Automation"
+      panes:
+        - cmd: "e ."

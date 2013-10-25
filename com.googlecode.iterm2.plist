@@ -724,7 +724,7 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>516 60 924 485 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1920 1200 0 0 1920 1178 </string>
+	<string>0 0 1440 900 0 0 1440 878 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1702,7 +1702,7 @@
 				<real>0.44058024883270264</real>
 			</dict>
 			<key>Guid</key>
-			<string>5359FECC-823E-4395-999E-1CA1A2744C7C</string>
+			<string>CAF7B1E4-6CE6-4149-9B27-531542C84825</string>
 			<key>Hide After Opening</key>
 			<false/>
 			<key>Horizontal Spacing</key>
@@ -2260,7 +2260,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2013-10-24T14:59:18Z</date>
+	<date>2013-10-25T14:59:17Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>

@@ -36,6 +36,9 @@ nnoremap <cr> :nohlsearch<cr>
 " Expand %% into the directory of the current file
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
+" Save with sudo
+cmap w!! %!sudo tee > /dev/null %
+
 if exists('$TMUX')
     set clipboard=
   else
@@ -135,6 +138,7 @@ Bundle 'rizzatti/funcoo.vim'
 Bundle 'rizzatti/dash.vim'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-rbenv'
+Bundle 'majutsushi/tagbar'
 
 " Colors
 Bundle 'altercation/vim-colors-solarized'

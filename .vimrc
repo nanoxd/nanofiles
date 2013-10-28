@@ -30,6 +30,12 @@ nnoremap <leader>ev :edit ~/.vimrc<cr>
 nnoremap - o<esc>
 nnoremap _ O<esc>
 
+" Turn off the christmas lights
+nnoremap <cr> :nohlsearch<cr>
+
+" Expand %% into the directory of the current file
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+
 if exists('$TMUX')
     set clipboard=
   else

@@ -144,6 +144,7 @@ Bundle 'majutsushi/tagbar'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'd11wtq/tomorrow-theme-vim'
 Bundle 'bling/vim-airline'
+Bundle 'chriskempson/base16-vim'
 
 "" CtrlP
 " Adds ; as the Ctrl+P fuzzy search

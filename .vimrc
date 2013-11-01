@@ -139,6 +139,7 @@ Bundle 'rizzatti/dash.vim'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-rbenv'
 Bundle 'majutsushi/tagbar'
+Bundle 'Valloric/YouCompleteMe'
 
 " Colors
 Bundle 'altercation/vim-colors-solarized'

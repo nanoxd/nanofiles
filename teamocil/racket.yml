@@ -1,0 +1,7 @@
+session:
+  name: "dev"
+  windows:
+    - name: "racket"
+      root: "~/Developer/Projects/realm_of_racket"
+      panes:
+        - cmd: "e ."

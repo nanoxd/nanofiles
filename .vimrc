@@ -108,6 +108,7 @@ Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'tpope/vim-bundler'
 
 " Tools
+Bundle 'tpope/vim-abolish'
 Bundle 'vim-scripts/ctags.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'thoughtbot/vim-rspec'

@@ -6,7 +6,7 @@ session:
       panes:
         - cmd: "ls"
     - name: "cask"
-      root: "~/Developer/Projects/homebrew-cask"
+      root: "~/Developer/Projects/caskroom/"
       layout: even-horizontal
       panes:
         - cmd: "echo 'Chatori?'"

@@ -1,0 +1,10 @@
+session:
+  name: "dev"
+  windows:
+    - name: "blog"
+      root: "~/Developer/Projects/blog"
+      panes:
+        - cmd: "e ."
+          focus: true
+          height: 70
+        - cmd: "rake preview"

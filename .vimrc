@@ -82,6 +82,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Languages
+Bundle 'vim-scripts/VimClojure'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-cucumber'
 Bundle 'elixir-lang/vim-elixir'
@@ -173,6 +174,10 @@ let g:UltiSnipsJumpForwardTrigger="<F2>"
 
 " Change default key for vim-unstack
 let g:unstack_mapkey="<F4>"
+
+" Modify VimClojure
+let g:vimclojure#HighlightBuiltins = 1
+let g:vimclojure#ParenRainbow = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Look, Style, and Feel
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

@@ -151,6 +151,9 @@ Bundle 'd11wtq/tomorrow-theme-vim'
 Bundle 'bling/vim-airline'
 Bundle 'chriskempson/base16-vim'
 
+" Linters
+Bundle 'marijnh/tern_for_vim'
+
 "" CtrlP
 " Adds ; as the Ctrl+P fuzzy search
 nmap ; :CtrlPBuffer<CR>

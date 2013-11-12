@@ -1,0 +1,7 @@
+session:
+  name: "dev"
+  windows:
+    - name: "fpoop"
+      root: "~/Developer/Projects/Functional Programming for OO Programmer"
+      panes:
+        - cmd: "ls"

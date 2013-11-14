@@ -73,6 +73,16 @@ inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Bundles && Bundle Specific Settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Setting up Vundle - the vim plugin bundler
+let iCanHazVundle=1
+let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
+if !filereadable(vundle_readme)
+  echo "Installing Vundle.."
+  echo ""
+  silent !mkdir -p ~/.vim/bundle
+  silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+  let iCanHazVundle=0
+endif
 
 " Declare bundles are handled via Vundle
 set rtp+=~/.vim/bundle/vundle/
@@ -153,6 +163,13 @@ Bundle 'chriskempson/base16-vim'
 
 " Linters
 Bundle 'marijnh/tern_for_vim'
+
+" Notification message
+if iCanHazVundle == 0
+  echo "Installing Bundles, please ignore key map error messages"
+  echo ""
+  :BundleInstall
+endif
 
 "" CtrlP
 " Adds ; as the Ctrl+P fuzzy search

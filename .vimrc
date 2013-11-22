@@ -137,8 +137,6 @@ Bundle 'benmills/vimux'
 Bundle 'scrooloose/nerdtree'
 Bundle 'danro/rename.vim'
 Bundle 'tpope/vim-surround'
-" VIM Syntax Linter
-Bundle 'scrooloose/syntastic'
 " Text filtering and alignment
 Bundle 'godlygeek/tabular'
 Bundle 'kana/vim-textobj-user'
@@ -163,6 +161,7 @@ Bundle 'chriskempson/base16-vim'
 
 " Linters
 Bundle 'marijnh/tern_for_vim'
+Bundle 'scrooloose/syntastic'
 
 " Notification message
 if iCanHazVundle == 0
@@ -248,7 +247,8 @@ let g:html_indent_tags = 'li\|p'
 " Markdown files end in .md
 au BufRead,BufNewFile *.md set filetype=markdown
 " Enable spellchecking for Markdown
-au BufRead,BufNewFile *.md setlocal spell
+autocmd BufRead,BufNewFile *.md setlocal spell
+autocmd FileType gitcommit setlocal spell
 
 " Set syntax for Go
 au BufRead,BufNewFile *.go set tabstop=4 softtabstop=4 shiftwidth=4 expandtab

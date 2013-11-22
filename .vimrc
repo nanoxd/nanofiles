@@ -234,7 +234,7 @@ au FileType make set noexpandtab
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Procfile,Thorfile,config.ru}  set ft=ruby
 
 " Set Sass files as sass
- au BufRead,BufNewFile *.scss set filetype=scss
+autocmd BufRead,BufNewFile *.scss set filetype=scss
 
 au BufRead,BufNewFile *.txt call s:setupWrapping()
 

@@ -8,7 +8,7 @@ set nobackup
 set nowritebackup
 set noswapfile
 set ruler
-set history=300
+set history=3000
 set showcmd       " display incomplete commands
 set laststatus=2
 set incsearch " Do incremental searching

@@ -1,0 +1,7 @@
+session:
+  name: "dev"
+  windows:
+    - name: "readlog"
+      root: "~/Developer/Projects/readlog"
+      panes:
+        - cmd: "e ."

@@ -134,9 +134,9 @@ Bundle 'tsaleh/vim-matchit'
 Bundle 'SirVer/ultisnips'
 Bundle 'benmills/vimux'
 " File Management
-Bundle 'scrooloose/nerdtree'
 Bundle 'danro/rename.vim'
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-vinegar'
 " Text filtering and alignment
 Bundle 'godlygeek/tabular'
 Bundle 'kana/vim-textobj-user'
@@ -175,9 +175,6 @@ endif
 nmap ; :CtrlPBuffer<CR>
 " Show the damn dotfiles
 let g:ctrlp_show_hidden = 1
-
-"" NERDTree
-nmap \e :NERDTreeToggle<CR>
 
 let g:rspec_command = "!rspec {spec}"
 map <Leader>t :call RunCurrentSpecFile()<CR>

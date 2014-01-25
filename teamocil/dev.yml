@@ -11,3 +11,7 @@ session:
       panes:
         - cmd: "echo 'Chatori?'"
         - cmd: "cd ~/Downloads"
+    - name: "NAND2Tetris"
+      root: "~/Developer/Projects/nand2tetris"
+      panes:
+        - cmd: "ls"

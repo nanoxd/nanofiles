@@ -124,6 +124,7 @@ Bundle 'tpope/vim-abolish'
 Bundle 'vim-scripts/ctags.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'thoughtbot/vim-rspec'
+Bundle 'tpope/vim-speeddating'
 " Adds automatic closing of quotes
 Bundle "Raimondi/delimitMate"
 Bundle 'tpope/vim-endwise'

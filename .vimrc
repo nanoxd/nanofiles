@@ -55,6 +55,9 @@ noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
 " Fast saving
 map <leader>w :w<cr>
 
+" Remove whitespace
+nnoremap <Leader>rtw :%s/\s\+$//e<CR>
+
 " Tab completion
 " will insert tab at beginning of line,
 " will use completion if not at beginning

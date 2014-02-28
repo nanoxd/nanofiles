@@ -121,6 +121,7 @@ Bundle "aaronjensen/vim-sass-status.git"
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'tpope/vim-bundler'
 Bundle 'amdt/vim-niji'
+Bundle 'tpope/vim-jdaddy'
 
 " Tools
 Bundle 'tpope/vim-abolish'

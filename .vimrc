@@ -227,6 +227,9 @@ function! s:setupWrapping()
   set textwidth=78
 endfunction
 
+highlight ColorColumn ctermbg=red
+call matchadd('ColorColumn', '\%81v', 100)
+
 """"Language specific whitespace
 
 " make uses real tabs

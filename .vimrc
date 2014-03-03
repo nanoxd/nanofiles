@@ -58,6 +58,9 @@ map <leader>w :w<cr>
 " Remove whitespace
 nnoremap <Leader>rtw :%s/\s\+$//e<CR>
 
+" Convert 1.8 Ruby hashes to 1.9+
+nnoremap <F12> :%s/:\([^ ]*\)\(\s*\)=>/\1:/g<return>
+
 " Tab completion
 " will insert tab at beginning of line,
 " will use completion if not at beginning

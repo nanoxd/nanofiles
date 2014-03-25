@@ -155,6 +155,7 @@ Bundle 'rizzatti/funcoo.vim'
 Bundle 'tpope/vim-repeat'
 Bundle 'majutsushi/tagbar'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'jaxbot/github-issues.vim'
 
 " Colors
 Bundle 'altercation/vim-colors-solarized'

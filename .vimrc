@@ -186,15 +186,9 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
-" Move between buffers
-map <Leader>b :bnext<CR>
-
 " Change default keys for UltiSnips
 let g:UltiSnipsExpandTrigger="<F1>"
 let g:UltiSnipsJumpForwardTrigger="<F2>"
-
-" Change default key for vim-unstack
-let g:unstack_mapkey="<F4>"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Look, Style, and Feel
@@ -279,7 +273,6 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal g'\"" | endif
 endif
-
 
 " easier navigation between split windows
 nnoremap <c-j> <c-w>j

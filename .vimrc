@@ -154,7 +154,6 @@ Bundle 'mattboehm/vim-accordion'
 Bundle 'rizzatti/funcoo.vim'
 Bundle 'rizzatti/dash.vim'
 Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-rbenv'
 Bundle 'majutsushi/tagbar'
 Bundle 'Valloric/YouCompleteMe'
 

@@ -183,6 +183,8 @@ if iCanHazNeoBundle == 0
   :NeoBundleInstall
 endif
 
+NeoBundleCheck
+
 "" CtrlP
 " Adds ; as the Ctrl+P fuzzy search
 nmap ; :CtrlPBuffer<CR>

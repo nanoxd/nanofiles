@@ -77,100 +77,110 @@ nnoremap <F12> :%s/:\([^ ]*\)\(\s*\)=>/\1:/g<return>
 " inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Bundles && Bundle Specific Settings
+" => NeoBundles && Bundle Specific Settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Setting up Vundle - the vim plugin bundler
-let iCanHazVundle=1
-let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
-if !filereadable(vundle_readme)
-  echo "Installing Vundle.."
+" Setting up NeoBundle
+let iCanHazNeoBundle=1
+let neobundle_readme=expand('~/.vim/bundle/neobundle.vim/README.md')
+if !filereadable(neobundle_readme)
+  echo "Installing NeoBundle.."
   echo ""
   silent !mkdir -p ~/.vim/bundle
-  silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
-  let iCanHazVundle=0
+  silent !git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+  let iCanHazNeoBundle=0
 endif
 
-" Declare bundles are handled via Vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" Declare bundles are handled via NeoBundle
+set rtp+=~/.vim/bundle/neobundle.vim/
+call neobundle#rc(expand('~/.vim/bundle/'))
 
-" Let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+" Let NeoBundle manage itself
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+NeoBundle 'Shougo/vimproc', {
+  \ 'build' : {
+    \ 'mac' : 'make -f make_mac.mak'
+  \ },
+\ }
 
 " Languages
-Bundle 'guns/vim-clojure-static'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'tpope/vim-cucumber'
-Bundle 'elixir-lang/vim-elixir'
-Bundle 'vim-scripts/fish-syntax'
-Bundle 'tpope/vim-git'
-Bundle 'jnwhiteh/vim-golang'
-Bundle 'tpope/vim-haml'
-Bundle 'wlangstroth/vim-haskell'
-Bundle 'xenoterracide/html.vim'
-Bundle 'vim-scripts/HTML-AutoCloseTag'
-Bundle 'pangloss/vim-javascript'
-Bundle 'leshill/vim-json'
-Bundle 'tpope/vim-markdown'
-Bundle 'b4winckler/vim-objc'
-Bundle 'ajf/puppet-vim'
-Bundle 'tpope/vim-rails'
-Bundle 'wlangstroth/vim-racket'
-Bundle 'tpope/vim-rake'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'sunaku/vim-ruby-minitest'
-Bundle "aaronjensen/vim-sass-status.git"
-Bundle 'cakebaker/scss-syntax.vim'
-Bundle 'tpope/vim-bundler'
-Bundle 'amdt/vim-niji'
-Bundle 'tpope/vim-jdaddy'
+NeoBundle 'guns/vim-clojure-static'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'tpope/vim-cucumber'
+NeoBundle 'elixir-lang/vim-elixir'
+NeoBundle 'vim-scripts/fish-syntax'
+NeoBundle 'tpope/vim-git'
+NeoBundle 'jnwhiteh/vim-golang'
+NeoBundle 'tpope/vim-haml'
+NeoBundle 'wlangstroth/vim-haskell'
+NeoBundle 'xenoterracide/html.vim'
+NeoBundle 'vim-scripts/HTML-AutoCloseTag'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'leshill/vim-json'
+NeoBundle 'tpope/vim-markdown'
+NeoBundle 'b4winckler/vim-objc'
+NeoBundle 'ajf/puppet-vim'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'wlangstroth/vim-racket'
+NeoBundle 'tpope/vim-rake'
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'sunaku/vim-ruby-minitest'
+NeoBundle "aaronjensen/vim-sass-status.git"
+NeoBundle 'cakebaker/scss-syntax.vim'
+NeoBundle 'tpope/vim-bundler'
+NeoBundle 'amdt/vim-niji'
+NeoBundle 'tpope/vim-jdaddy'
 
 " Tools
-Bundle 'tpope/vim-abolish'
-Bundle 'vim-scripts/ctags.vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'thoughtbot/vim-rspec'
-Bundle 'tpope/vim-speeddating'
+NeoBundle 'tpope/vim-abolish'
+NeoBundle 'vim-scripts/ctags.vim'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'thoughtbot/vim-rspec'
+NeoBundle 'tpope/vim-speeddating'
 " Adds automatic closing of quotes
-Bundle "Raimondi/delimitMate"
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-fugitive'
-Bundle 'vim-scripts/greplace.vim'
-Bundle 'SirVer/ultisnips'
-Bundle 'benmills/vimux'
+NeoBundle "Raimondi/delimitMate"
+NeoBundle 'tpope/vim-endwise'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'vim-scripts/greplace.vim'
+NeoBundle 'SirVer/ultisnips'
+NeoBundle 'benmills/vimux'
 " File Management
-Bundle 'danro/rename.vim'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-vinegar'
+NeoBundle 'danro/rename.vim'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-vinegar'
 " Text filtering and alignment
-Bundle 'godlygeek/tabular'
-Bundle 'kana/vim-textobj-user'
-Bundle 'nelstrom/vim-textobj-rubyblock'
-Bundle 'tomtom/tcomment_vim'
-Bundle 'christoomey/vim-tmux-navigator'
-Bundle 'tolecnal/vim-matchit'
-Bundle 'mattboehm/vim-unstack'
-Bundle 'mattboehm/vim-accordion'
-Bundle 'rizzatti/funcoo.vim'
-Bundle 'tpope/vim-repeat'
-Bundle 'majutsushi/tagbar'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'jaxbot/github-issues.vim'
+NeoBundle 'godlygeek/tabular'
+NeoBundle 'kana/vim-textobj-user'
+NeoBundle 'nelstrom/vim-textobj-rubyblock'
+NeoBundle 'tomtom/tcomment_vim'
+NeoBundle 'christoomey/vim-tmux-navigator'
+NeoBundle 'tolecnal/vim-matchit'
+NeoBundle 'mattboehm/vim-unstack'
+NeoBundle 'mattboehm/vim-accordion'
+NeoBundle 'rizzatti/funcoo.vim'
+NeoBundle 'tpope/vim-repeat'
+NeoBundle 'majutsushi/tagbar'
+NeoBundle 'Valloric/YouCompleteMe', {
+      \ 'build' : {
+      \   'mac' : './install.sh'
+      \ },
+\ }
+NeoBundle 'jaxbot/github-issues.vim'
 
 " Colors
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'd11wtq/tomorrow-theme-vim'
-Bundle 'bling/vim-airline'
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'd11wtq/tomorrow-theme-vim'
+NeoBundle 'bling/vim-airline'
 
 " Linters
-Bundle 'marijnh/tern_for_vim'
-Bundle 'scrooloose/syntastic'
+NeoBundle 'marijnh/tern_for_vim'
+NeoBundle 'scrooloose/syntastic'
 
 " Notification message
-if iCanHazVundle == 0
+if iCanHazNeoBundle == 0
   echo "Installing Bundles, please ignore key map error messages"
   echo ""
-  :BundleInstall
+  :NeoBundleInstall
 endif
 
 "" CtrlP

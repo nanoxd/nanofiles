@@ -166,6 +166,7 @@ NeoBundle 'Valloric/YouCompleteMe', {
       \ },
 \ }
 NeoBundle 'jaxbot/github-issues.vim'
+NeoBundle 'AndrewRadev/splitjoin.vim'
 
 " Colors
 NeoBundle 'altercation/vim-colors-solarized'
@@ -200,6 +201,10 @@ map <Leader>a :call RunAllSpecs()<CR>
 " Change default keys for UltiSnips
 let g:UltiSnipsExpandTrigger="<F1>"
 let g:UltiSnipsJumpForwardTrigger="<F2>"
+
+" SplitJoin
+nmap sj :SplitjoinSplit<cr>
+nmap sk :SplitjoinJoin<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Look, Style, and Feel

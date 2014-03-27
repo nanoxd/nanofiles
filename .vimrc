@@ -77,25 +77,31 @@ nnoremap <F12> :%s/:\([^ ]*\)\(\s*\)=>/\1:/g<return>
 " inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Bundles && Bundle Specific Settings
+" => NeoBundles && Bundle Specific Settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Setting up Vundle - the vim plugin bundler
-let iCanHazVundle=1
-let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
-if !filereadable(vundle_readme)
-  echo "Installing Vundle.."
+" Setting up NeoBundle
+let iCanHazNeoBundle=1
+let neobundle_readme=expand('~/.vim/bundle/neobundle.vim/README.md')
+if !filereadable(neobundle_readme)
+  echo "Installing NeoBundle.."
   echo ""
   silent !mkdir -p ~/.vim/bundle
-  silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
-  let iCanHazVundle=0
+  silent !git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+  let iCanHazNeoBundle=0
 endif
 
-" Declare bundles are handled via Vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" Declare bundles are handled via NeoBundle
+set rtp+=~/.vim/bundle/neobundle.vim/
+call neobundle#rc(expand('~/.vim/bundle/'))
 
-" Let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+" Let NeoBundle manage itself
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+NeoBundle 'Shougo/vimproc', {
+  \ 'build' : {
+    \ 'mac' : 'make -f make_mac.mak'
+  \ },
+\ }
 
 " Languages
 Bundle 'guns/vim-clojure-static'
@@ -167,10 +173,10 @@ Bundle 'marijnh/tern_for_vim'
 Bundle 'scrooloose/syntastic'
 
 " Notification message
-if iCanHazVundle == 0
+if iCanHazNeoBundle == 0
   echo "Installing Bundles, please ignore key map error messages"
   echo ""
-  :BundleInstall
+  :NeoBundleInstall
 endif
 
 "" CtrlP

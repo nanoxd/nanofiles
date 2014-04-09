@@ -8,15 +8,15 @@ new_window "dev"
 
 # Split window into panes.
 #split_v 20
-#split_h 50
+split_h 50
 
 # Run commands.
-#run_cmd "top"     # runs in active pane
-#run_cmd "date" 1  # runs in pane 1
+run_cmd "cd ~/Developer/Automation/laptop"     # runs in active pane
+run_cmd "cd ~/Developer/Code/nanofiles" 1  # runs in pane 1
 
 # Paste text
 #send_keys "top"    # paste into active pane
 #send_keys "date" 1 # paste into active pane
 
 # Set active pane.
-#select_pane 0
+select_pane 0

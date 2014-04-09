@@ -118,7 +118,6 @@ NeoBundle 'Shougo/vimproc', {
 " Languages
 NeoBundle 'guns/vim-clojure-static'
 NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'tpope/vim-cucumber'
 NeoBundle 'elixir-lang/vim-elixir'
 NeoBundle 'vim-scripts/fish-syntax'
 NeoBundle 'tpope/vim-git'
@@ -128,26 +127,36 @@ NeoBundle 'wlangstroth/vim-haskell'
 NeoBundle 'xenoterracide/html.vim'
 NeoBundle 'vim-scripts/HTML-AutoCloseTag'
 NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'othree/javascript-libraries-syntax.vim'
+NeoBundle 'itspriddle/vim-jquery'
 NeoBundle 'leshill/vim-json'
+NeoBundle 'groenewege/vim-less.git'
 NeoBundle 'tpope/vim-markdown'
+NeoBundle 'jtratner/vim-flavored-markdown.git'
 NeoBundle 'b4winckler/vim-objc'
-NeoBundle 'ajf/puppet-vim'
-NeoBundle 'tpope/vim-rails'
+NeoBundle 'rodjek/vim-puppet'
 NeoBundle 'wlangstroth/vim-racket'
-NeoBundle 'tpope/vim-rake'
-NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'sunaku/vim-ruby-minitest'
 NeoBundle "aaronjensen/vim-sass-status.git"
 NeoBundle 'cakebaker/scss-syntax.vim'
-NeoBundle 'tpope/vim-bundler'
 NeoBundle 'amdt/vim-niji'
 NeoBundle 'tpope/vim-jdaddy'
+NeoBundle 'jby/tmux.vim'
+
+" Ruby
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'sunaku/vim-ruby-minitest'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'tpope/vim-rake'
+NeoBundle 'tpope/vim-cucumber'
+NeoBundle 'Keithbsmiley/rspec.vim'
+NeoBundle 'tpope/vim-bundler'
 
 " Tools
+NeoBundle 'rking/ag.vim'
+NeoBundle 'nelstrom/vim-visual-star-search'
 NeoBundle 'tpope/vim-abolish'
 NeoBundle 'vim-scripts/ctags.vim'
 NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'thoughtbot/vim-rspec'
 NeoBundle 'tpope/vim-speeddating'
 " Adds automatic closing of quotes
 NeoBundle "Raimondi/delimitMate"
@@ -157,19 +166,22 @@ NeoBundle 'vim-scripts/greplace.vim'
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'benmills/vimux'
-" File Management
 NeoBundle 'danro/rename.vim'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-vinegar'
-" Text filtering and alignment
-NeoBundle 'godlygeek/tabular'
+NeoBundle 'terryma/vim-multiple-cursors'
+
+" Text Objects
 NeoBundle 'kana/vim-textobj-user'
+NeoBundle 'bootleq/vim-textobj-rubysymbol'
 NeoBundle 'nelstrom/vim-textobj-rubyblock'
+NeoBundle 'coderifous/textobj-word-column.vim'
+
+NeoBundle 'godlygeek/tabular'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundle 'tolecnal/vim-matchit'
 NeoBundle 'mattboehm/vim-unstack'
-NeoBundle 'mattboehm/vim-accordion'
 NeoBundle 'rizzatti/funcoo.vim'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'majutsushi/tagbar'
@@ -183,9 +195,10 @@ NeoBundle 'jaxbot/github-issues.vim'
 NeoBundle 'AndrewRadev/splitjoin.vim'
 
 " Colors
-NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'skwp/vim-colors-solarized'
 NeoBundle 'd11wtq/tomorrow-theme-vim'
 NeoBundle 'bling/vim-airline'
+NeoBundle 'chrisbra/Colorizer'
 
 " Linters
 NeoBundle 'marijnh/tern_for_vim'
@@ -325,11 +338,8 @@ nnoremap <c-l> <c-w>l
 
 " The Silver Searcher
 if executable('ag')
-  " Use ag over grep
-    set grepprg=ag\ --nogroup\ --nocolor
-
     " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+    let g:ctrlp_user_command = 'ag %s --files-with-matches -g "" --ignore "\.git$\|\.hg$\|\.svn$"'
 
     " ag is fast enough that CtrlP doesn't need to cache
     let g:ctrlp_use_caching = 0
@@ -337,3 +347,6 @@ endif
 
 " Generate ctags
 nmap <silent> <leader>rt :!ctags -R --exclude=".git\|.svn\|log\|tmp\|db\|pkg" --extra=+f<CR>
+
+" Source custom Solarized settings
+source ~/.vim/settings/solarized.vim

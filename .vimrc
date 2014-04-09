@@ -4,9 +4,6 @@
 let mapleader = " "
 
 set nocompatible " No reason to limit ourselves to vi compatibility
-set nobackup
-set nowritebackup
-set noswapfile
 set ruler
 set history=3000
 set showcmd       " display incomplete commands
@@ -17,7 +14,22 @@ set rnu
 set hls
 set relativenumber
 set number
+set autoread " Reload files changed outside vim
+set hidden " The current buffer can be put to the background without writing to disk;
 
+" Turns off swap files
+set nobackup
+set nowritebackup
+set noswapfile
+
+" Persistent Undo
+" Keep undo history across sessions, by storing in file.
+if has('persistent_undo')
+  silent !mkdir ~/.vim/backups > /dev/null 2>&1
+  set undodir=~/.vim/backups
+  set undofile
+endif
+"
 " Set encoding
 set encoding=utf-8
 
@@ -222,6 +234,8 @@ let g:airline#extensions#tabline#enabled = 1
 set guifont=Ubuntu\ Mono\ Derivative\ Powerline:h18
 
 " Whitespace defaults
+set autoindent
+set smartindent
 set nowrap
 set tabstop=2
 set shiftwidth=2
@@ -272,7 +286,8 @@ au BufRead,BufNewFile *.go set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 set backspace=indent,eol,start
 
 " load the plugin and indent settings for the detected filetype
-filetype plugin indent on
+filetype plugin on
+filetype indent on
 
 " % to bounce from do to end etc.
 runtime! macros/matchit.vim

@@ -173,6 +173,7 @@ NeoBundle 'mattboehm/vim-accordion'
 NeoBundle 'rizzatti/funcoo.vim'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'majutsushi/tagbar'
+NeoBundle 'ervandew/supertab'
 NeoBundle 'Valloric/YouCompleteMe', {
       \ 'build' : {
       \   'mac' : './install.sh'
@@ -211,9 +212,15 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
-" Change default keys for UltiSnips
-let g:UltiSnipsExpandTrigger="<F1>"
-let g:UltiSnipsJumpForwardTrigger="<F2>"
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 " SplitJoin
 nmap sj :SplitjoinSplit<cr>

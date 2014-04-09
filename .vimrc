@@ -143,6 +143,7 @@ NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'vim-scripts/greplace.vim'
 NeoBundle 'SirVer/ultisnips'
+NeoBundle 'honza/vim-snippets'
 NeoBundle 'benmills/vimux'
 " File Management
 NeoBundle 'danro/rename.vim'

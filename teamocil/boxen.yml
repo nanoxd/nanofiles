@@ -1,7 +1,0 @@
-session:
-  name: "dev"
-  windows:
-    - name: "boxen"
-      root: "/opt/boxen"
-      panes:
-        - cmd: "ls"

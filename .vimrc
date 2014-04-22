@@ -141,6 +141,7 @@ NeoBundle 'cakebaker/scss-syntax.vim'
 NeoBundle 'amdt/vim-niji'
 NeoBundle 'tpope/vim-jdaddy'
 NeoBundle 'jby/tmux.vim'
+NeoBundle 'mustache/vim-mustache-handlebars'
 
 " Ruby
 NeoBundle 'vim-ruby/vim-ruby'

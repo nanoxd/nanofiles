@@ -16,3 +16,4 @@ Inboard       | Hyper + S | Screenshot selection
 Moom          | Hyper + M | Window resizing
 Moom          | Hyper + " | Move applications to fit two displays
 Frank DeLoupe | Hyper + C | Display a loupe for color id
+Alfred        | Hyper + V | Display snippets

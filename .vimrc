@@ -73,130 +73,121 @@ nnoremap <F12> :%s/:\([^ ]*\)\(\s*\)=>/\1:/g<return>
 au FileType go nmap <Leader>g :w\|:!go run %<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => NeoBundles && Bundle Specific Settings
+" => Vundle && Plugin Specific Settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Setting up NeoBundle
-let iCanHazNeoBundle=1
-let neobundle_readme=expand('~/.vim/bundle/neobundle.vim/README.md')
-if !filereadable(neobundle_readme)
-  echo "Installing NeoBundle.."
+" Setting up Vundle
+let iCanHazVundle=1
+let vundle_readme=expand('~/.vim/bundle/Vundle.vim/README.md')
+if !filereadable(vundle_readme)
+  echo "Installing Vundle.."
   echo ""
   silent !mkdir -p ~/.vim/bundle
-  silent !git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
-  let iCanHazNeoBundle=0
+  silent !git clone https://github.com/gmarik/Vundle.vim ~/.vim/bundle/Vundle.vim
+  let iCanHazVundle=0
 endif
 
-" Declare bundles are handled via NeoBundle
-set rtp+=~/.vim/bundle/neobundle.vim/
-call neobundle#rc(expand('~/.vim/bundle/'))
+" Declare bundles are handled via Vundle
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#begin(expand('~/.vim/bundle/'))
 
-" Let NeoBundle manage itself
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-NeoBundle 'Shougo/vimproc', {
-  \ 'build' : {
-    \ 'mac' : 'make -f make_mac.mak'
-  \ },
-\ }
+" Let Vundle manage itself
+Plugin 'gmarik/Vundle.vim'
 
 " Languages
-NeoBundle 'guns/vim-clojure-static'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'elixir-lang/vim-elixir'
-NeoBundle 'vim-scripts/fish-syntax'
-NeoBundle 'tpope/vim-git'
-NeoBundle 'fatih/vim-go'
-NeoBundle 'tpope/vim-haml'
-NeoBundle 'wlangstroth/vim-haskell'
-NeoBundle 'xenoterracide/html.vim'
-NeoBundle 'vim-scripts/HTML-AutoCloseTag'
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'othree/javascript-libraries-syntax.vim'
-NeoBundle 'itspriddle/vim-jquery'
-NeoBundle 'leshill/vim-json'
-NeoBundle 'groenewege/vim-less.git'
-NeoBundle 'tpope/vim-markdown'
-NeoBundle 'jtratner/vim-flavored-markdown.git'
-NeoBundle 'b4winckler/vim-objc'
-NeoBundle 'rodjek/vim-puppet'
-NeoBundle 'wlangstroth/vim-racket'
-NeoBundle "aaronjensen/vim-sass-status.git"
-NeoBundle 'cakebaker/scss-syntax.vim'
-NeoBundle 'amdt/vim-niji'
-NeoBundle 'tpope/vim-jdaddy'
-NeoBundle 'jby/tmux.vim'
-NeoBundle 'mustache/vim-mustache-handlebars'
+Plugin 'guns/vim-clojure-static'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'vim-scripts/fish-syntax'
+Plugin 'tpope/vim-git'
+Plugin 'fatih/vim-go'
+Plugin 'tpope/vim-haml'
+Plugin 'wlangstroth/vim-haskell'
+Plugin 'xenoterracide/html.vim'
+Plugin 'vim-scripts/HTML-AutoCloseTag'
+Plugin 'pangloss/vim-javascript'
+Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'itspriddle/vim-jquery'
+Plugin 'leshill/vim-json'
+Plugin 'groenewege/vim-less.git'
+Plugin 'tpope/vim-markdown'
+Plugin 'jtratner/vim-flavored-markdown.git'
+Plugin 'b4winckler/vim-objc'
+Plugin 'rodjek/vim-puppet'
+Plugin 'wlangstroth/vim-racket'
+Plugin 'aaronjensen/vim-sass-status.git'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'amdt/vim-niji'
+Plugin 'tpope/vim-jdaddy'
+Plugin 'jby/tmux.vim'
+Plugin 'mustache/vim-mustache-handlebars'
 
 " Ruby
-NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'sunaku/vim-ruby-minitest'
-NeoBundle 'tpope/vim-rails'
-NeoBundle 'tpope/vim-rake'
-NeoBundle 'tpope/vim-cucumber'
-NeoBundle 'Keithbsmiley/rspec.vim'
-NeoBundle 'tpope/vim-bundler'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'sunaku/vim-ruby-minitest'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-rake'
+Plugin 'tpope/vim-cucumber'
+Plugin 'Keithbsmiley/rspec.vim'
+Plugin 'tpope/vim-bundler'
 
 " Tools
-NeoBundle 'rking/ag.vim'
-NeoBundle 'nelstrom/vim-visual-star-search'
-NeoBundle 'tpope/vim-abolish'
-NeoBundle 'vim-scripts/ctags.vim'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'tpope/vim-speeddating'
+Plugin 'rking/ag.vim'
+Plugin 'nelstrom/vim-visual-star-search'
+Plugin 'tpope/vim-abolish'
+Plugin 'vim-scripts/ctags.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-speeddating'
 " Adds automatic closing of quotes
-NeoBundle "Raimondi/delimitMate"
-NeoBundle 'tpope/vim-endwise'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'vim-scripts/greplace.vim'
-NeoBundle 'SirVer/ultisnips'
-NeoBundle 'honza/vim-snippets'
-NeoBundle 'benmills/vimux'
-NeoBundle 'danro/rename.vim'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'tpope/vim-vinegar'
-NeoBundle 'terryma/vim-multiple-cursors'
+Plugin 'Raimondi/delimitMate'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-fugitive'
+Plugin 'vim-scripts/greplace.vim'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'benmills/vimux'
+Plugin 'danro/rename.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-vinegar'
+Plugin 'terryma/vim-multiple-cursors'
 
 " Text Objects
-NeoBundle 'kana/vim-textobj-user'
-NeoBundle 'bootleq/vim-textobj-rubysymbol'
-NeoBundle 'nelstrom/vim-textobj-rubyblock'
-NeoBundle 'coderifous/textobj-word-column.vim'
+Plugin 'kana/vim-textobj-user'
+Plugin 'bootleq/vim-textobj-rubysymbol'
+Plugin 'nelstrom/vim-textobj-rubyblock'
+Plugin 'coderifous/textobj-word-column.vim'
 
-NeoBundle 'godlygeek/tabular'
-NeoBundle 'tomtom/tcomment_vim'
-NeoBundle 'christoomey/vim-tmux-navigator'
-NeoBundle 'tolecnal/vim-matchit'
-NeoBundle 'mattboehm/vim-unstack'
-NeoBundle 'rizzatti/funcoo.vim'
-NeoBundle 'tpope/vim-repeat'
-NeoBundle 'majutsushi/tagbar'
-NeoBundle 'ervandew/supertab'
-NeoBundle 'Valloric/YouCompleteMe', {
-      \ 'build' : {
-      \   'mac' : './install.sh'
-      \ },
-\ }
-NeoBundle 'jaxbot/github-issues.vim'
-NeoBundle 'AndrewRadev/splitjoin.vim'
+Plugin 'godlygeek/tabular'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'tolecnal/vim-matchit'
+Plugin 'mattboehm/vim-unstack'
+Plugin 'rizzatti/funcoo.vim'
+Plugin 'tpope/vim-repeat'
+Plugin 'majutsushi/tagbar'
+Plugin 'ervandew/supertab'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'jaxbot/github-issues.vim'
+Plugin 'AndrewRadev/splitjoin.vim'
 
 " Colors
-NeoBundle 'skwp/vim-colors-solarized'
-NeoBundle 'd11wtq/tomorrow-theme-vim'
-NeoBundle 'bling/vim-airline'
-NeoBundle 'chrisbra/Colorizer'
+Plugin 'skwp/vim-colors-solarized'
+Plugin 'bling/vim-airline'
+Plugin 'chrisbra/Colorizer'
 
 " Linters
-NeoBundle 'marijnh/tern_for_vim'
-NeoBundle 'scrooloose/syntastic'
+Plugin 'marijnh/tern_for_vim'
+Plugin 'scrooloose/syntastic'
 
 " Notification message
-if iCanHazNeoBundle == 0
+if iCanHazVundle == 0
   echo "Installing Bundles, please ignore key map error messages"
   echo ""
-  :NeoBundleInstall
+  :PluginInstall
 endif
 
-NeoBundleCheck
+call vundle#end()
+filetype plugin indent on
+
 
 "" CtrlP
 " Adds ; as the Ctrl+P fuzzy search

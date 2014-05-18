@@ -36,14 +36,12 @@ set encoding=utf-8
 " When vimrc is edited, reload it
 autocmd! bufwritepost .vimrc source ~/.vimrc
 
-nnoremap <leader>ev :edit ~/.vimrc<cr>
-
 " make `-` and `_` work like `o` and `O` without leaving you stuck in insert
 nnoremap - o<esc>
 nnoremap _ O<esc>
 
 " Turn off the christmas lights
-nnoremap <cr> :nohlsearch<cr>
+nnoremap <Leader><cr> :nohlsearch<cr>
 
 " Expand %% into the directory of the current file
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
@@ -59,7 +57,6 @@ endif
 
 " Yank text to the OS X clipboard
 noremap <leader>y "*y
-noremap <leader>yy "*Y
 
 " Preserve indentation while pasting text from the OS X clipboard
 noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
@@ -293,10 +290,6 @@ au BufRead,BufNewFile *.go set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-" load the plugin and indent settings for the detected filetype
-filetype plugin on
-filetype indent on
-
 " % to bounce from do to end etc.
 runtime! macros/matchit.vim
 
@@ -326,11 +319,11 @@ nnoremap <c-l> <c-w>l
 
 " The Silver Searcher
 if executable('ag')
-    " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-    let g:ctrlp_user_command = 'ag %s --files-with-matches -g "" --ignore "\.git$\|\.hg$\|\.svn$"'
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s --files-with-matches -g "" --ignore "\.git$\|\.hg$\|\.svn$"'
 
-    " ag is fast enough that CtrlP doesn't need to cache
-    let g:ctrlp_use_caching = 0
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
 endif
 
 " Generate ctags

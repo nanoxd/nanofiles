@@ -1,13 +1,13 @@
 # Set paths
-set fish_user_paths /usr/local/sbin /usr/local/bin /usr/local/share/npm/bin /usr/local/share/python ~/bin
+set -U fish_user_paths /usr/local/sbin /usr/local/bin /usr/local/share/npm/bin /usr/local/share/python ~/bin
 
 # Load Solarized for colors
 . $HOME/.config/fish/solarized.fish
 
 # Editors
-set -x EDITOR 'vim'
-set -x VISUAL 'vim'
-set -x PAGER 'less'
+set -U EDITOR vim
+set -U VISUAL vim
+set -U PAGER less
 
 # ENVs
 set -x GOPATH "$HOME/Developer/Code/go"

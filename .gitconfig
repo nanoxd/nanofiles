@@ -22,6 +22,7 @@
   co = checkout
   create-branch = !sh -c 'git push origin HEAD:refs/heads/$1 && git fetch origin && git branch --track $1 origin/$1 && cd . && git checkout $1' -
   dc = diff --cached
+  delete-merged-branches="git co master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
   delete-branch = !sh -c 'git push origin :refs/heads/$1 && git remote prune origin && git branch -D $1' -g
   f = "!git ls-files | grep -i"
   filelog = log -u

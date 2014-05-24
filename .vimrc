@@ -8,14 +8,23 @@ set ruler
 set history=3000
 set showcmd       " display incomplete commands
 set laststatus=2
-set incsearch " Do incremental searching
 set noshowmode " Hide the default mode text
-set rnu
-set hls
 set relativenumber
 set number
 set autoread " Reload files changed outside vim
 set hidden " The current buffer can be put to the background without writing to disk;
+
+" Search
+set incsearch  " Highlight while searching
+set hlsearch   " Highlight all matches after entering search pattern
+set ignorecase " Case insensitve pattern matching
+set smartcase  " Override ignorecase if pattern contains upcase
+
+" Split settings:
+set winwidth=84
+set winheight=10
+set winminheight=10
+set winheight=999
 
 " Turns off swap files
 set nobackup
@@ -29,7 +38,7 @@ if has('persistent_undo')
   set undodir=~/.vim/backups
   set undofile
 endif
-"
+
 " Set encoding
 set encoding=utf-8
 

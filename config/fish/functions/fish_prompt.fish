@@ -1,23 +1,32 @@
-function fish_prompt --description 'Write out the prompt'
-	
-	set -l last_status $status
+function fish_prompt
+  set -l last_status $status
+  set -l cyan (set_color cyan)
+  set -l yellow (set_color yellow)
+  set -l red (set_color red)
+  set -l blue (set_color blue)
+  set -l green (set_color green)
+  set -l normal (set_color normal)
 
-	if not set -q __fish_prompt_normal
-		set -g __fish_prompt_normal (set_color normal)
-	end
+  set -l cwd $blue(pwd | sed "s:^$HOME:~:")
 
-	# PWD
-	set_color $fish_color_cwd
-	echo -n (prompt_pwd)
-	set_color normal
+  # Output the prompt, left to right
 
-	printf '%s ' (__fish_git_prompt)
+  # Add a newline before new prompts
+  echo -e ''
 
-	if not test $last_status -eq 0
-	set_color $fish_color_error
-	end
+  # Print pwd or full path
+  echo -n -s $cwd $normal
 
-	echo -n '$ '
+  echo -n (__fish_git_prompt)
 
-	set_color normal
+  # Terminate with a nice prompt char
+  echo -e ''
+
+  if test $last_status -ne 0
+    set_color red
+    printf '❯ ' $last_status
+    set_color normal
+  else
+    echo -e -n -s '❯ ' $normal
+  end
 end

@@ -1,0 +1,116 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vundle && Plugin Specific Settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Setting up Vundle
+let iCanHazVundle=1
+let vundle_readme=expand('~/.vim/bundle/Vundle.vim/README.md')
+if !filereadable(vundle_readme)
+  echo "Installing Vundle.."
+  echo ""
+  silent !mkdir -p ~/.vim/bundle
+  silent !git clone https://github.com/gmarik/Vundle.vim ~/.vim/bundle/Vundle.vim
+  let iCanHazVundle=0
+endif
+
+" Declare bundles are handled via Vundle
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#begin(expand('~/.vim/bundle/'))
+
+" Let Vundle manage itself
+Plugin 'gmarik/Vundle.vim'
+
+" Languages
+Plugin 'guns/vim-clojure-static'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'ekalinin/Dockerfile.vim'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'dag/vim-fish'
+Plugin 'tpope/vim-git'
+Plugin 'fatih/vim-go'
+Plugin 'tpope/vim-haml'
+Plugin 'wlangstroth/vim-haskell'
+Plugin 'xenoterracide/html.vim'
+Plugin 'vim-scripts/HTML-AutoCloseTag'
+Plugin 'pangloss/vim-javascript'
+Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'itspriddle/vim-jquery'
+Plugin 'leshill/vim-json'
+Plugin 'groenewege/vim-less.git'
+Plugin 'tpope/vim-markdown'
+Plugin 'jtratner/vim-flavored-markdown.git'
+Plugin 'b4winckler/vim-objc'
+Plugin 'rodjek/vim-puppet'
+Plugin 'wlangstroth/vim-racket'
+Plugin 'aaronjensen/vim-sass-status.git'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'amdt/vim-niji'
+Plugin 'tpope/vim-jdaddy'
+Plugin 'jby/tmux.vim'
+Plugin 'mustache/vim-mustache-handlebars'
+
+" Ruby
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'sunaku/vim-ruby-minitest'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-rake'
+Plugin 'tpope/vim-cucumber'
+Plugin 'Keithbsmiley/rspec.vim'
+Plugin 'tpope/vim-bundler'
+
+" Tools
+Plugin 'rking/ag.vim'
+Plugin 'nelstrom/vim-visual-star-search'
+Plugin 'tpope/vim-abolish'
+Plugin 'vim-scripts/ctags.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-speeddating'
+" Adds automatic closing of quotes
+Plugin 'Raimondi/delimitMate'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-fugitive'
+Plugin 'vim-scripts/greplace.vim'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'benmills/vimux'
+Plugin 'danro/rename.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-vinegar'
+Plugin 'terryma/vim-multiple-cursors'
+
+" Text Objects
+Plugin 'kana/vim-textobj-user'
+Plugin 'bootleq/vim-textobj-rubysymbol'
+Plugin 'nelstrom/vim-textobj-rubyblock'
+Plugin 'coderifous/textobj-word-column.vim'
+
+Plugin 'godlygeek/tabular'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'tolecnal/vim-matchit'
+Plugin 'mattboehm/vim-unstack'
+Plugin 'rizzatti/funcoo.vim'
+Plugin 'tpope/vim-repeat'
+Plugin 'majutsushi/tagbar'
+Plugin 'ervandew/supertab'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'jaxbot/github-issues.vim'
+Plugin 'AndrewRadev/splitjoin.vim'
+
+" Colors
+Plugin 'skwp/vim-colors-solarized'
+Plugin 'bling/vim-airline'
+Plugin 'chrisbra/Colorizer'
+
+" Linters
+Plugin 'marijnh/tern_for_vim'
+Plugin 'scrooloose/syntastic'
+
+" Notification message
+if iCanHazVundle == 0
+  echo "Installing Bundles, please ignore key map error messages"
+  echo ""
+  :PluginInstall
+endif
+
+call vundle#end()
+filetype plugin indent on

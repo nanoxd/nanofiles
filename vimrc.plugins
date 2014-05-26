@@ -93,7 +93,6 @@ Plugin 'tpope/vim-repeat'
 Plugin 'majutsushi/tagbar'
 Plugin 'ervandew/supertab'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'jaxbot/github-issues.vim'
 Plugin 'AndrewRadev/splitjoin.vim'
 
 " Colors

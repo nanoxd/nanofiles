@@ -16,6 +16,7 @@
   ai = add --interactive
   ap = add --patch
   br = branch
+  browse = "!hub browse"
   ca = commit --amend
   ci = commit -v
   cl = clone
@@ -26,12 +27,13 @@
   delete-branch = !sh -c 'git push origin :refs/heads/$1 && git remote prune origin && git branch -D $1' -g
   f = "!git ls-files | grep -i"
   filelog = log -u
+  issues = !hub browse -- issues
   merge-branch = !git checkout master && git merge @{-1} --ff-only
   pn = push --set-upstream origin master
   rebase-origin = !git fetch origin && git rebase origin/master
   reset-hard = reset --hard HEAD
   st = status -s
-	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 
 [core]
   excludesfile = ~/.gitignore
@@ -42,7 +44,9 @@
 
 [format]
   pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
+
 [diff]
   tool = vimdiff
+
 [mergetool]
-	prompt = false
+  prompt = false

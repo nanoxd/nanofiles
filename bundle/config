@@ -1,0 +1,3 @@
+---
+BUNDLE_JOBS: '11'
+BUNDLE_CONSOLE: pry

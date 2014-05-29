@@ -1,64 +1,77 @@
-#!/usr/bin/env bash
-# Usage: pair [<github-user>] [-t <tmux-session>]
-#
-# Copy the command to clipboard which grants another person access to the tmux
-# session on your machine. The resulting command is in format:
-#
-#   ssh -t <USER>@<HOST> 'tmux attach -t <SESSION>'
-#
-# When given a GitHub username, it will adopt SSH keys from their GitHub
-# account and add them to your `~/.ssh/authorized_keys`.
+#!/bin/sh
 
-# Requirements:
-# - tmux
-# - ssh server
-# - "github-auth" gem
+command=$(basename $0)
 
-set -e
-
-tmux_session=""
-github_user=""
-
-while [ -n "$1" ]; do
-  case "$1" in
-  '-h' | '--help' )
-    sed -ne '/^#/!q;s/.\{1,2\}//;1d;p' < "$0"
-    exit 0
-    ;;
-  '-t'* )
-    tmux_session="${1:2}"
-    if [ -z "$tmux_session" ]; then
-      tmux_session="$2"
-      shift 2
-    else
-      shift 1
-    fi
-    ;;
-  * )
-    github_user="$1"
-    shift 1
-  esac
-done
-
-ssh_port=22
-
-if ! nc -zv localhost $ssh_port >/dev/null 2>&1; then
-  echo "Error: it seems that sshd is not running on the port $ssh_port" >&2
-  if [ "$(uname -s)" = "Darwin" ]; then
-    echo "Tip: System Preferences -> Sharing -> enable 'Remote Login'" >&2
-  fi
+# Make sure dependencies are installed
+if [ ! $(command -v gh-auth) ]; then
+  gem install github-auth
+fi
+if [ ! $(command -v tmux) ]; then
+  echo "This script depends on tmux. Try: brew install tmux"
+  exit 1
+fi
+if [ ! $(command -v ng) ]; then
+  echo "This script depends on https://github.com/iamvery/dotfiles/blob/master/bin/ng"
   exit 1
 fi
 
-host="$(curl -fsS icanhazip.com)"
-tmux="$(which tmux)"
+help(){
+  echo "Usage: $command <subcommand> [options]\n"
+  echo "Subcommands:"
+  echo "    add  Add a github user"
+  echo "    rm   Remove a github user"
+  echo "    ls   List github users"
+  echo "    up   Open shared tmux session"
+  echo "    ssh  Start a reverse tunnel for pair sharing"
+  echo "         See: https://ngrok.com"
+  echo ""
+  echo "** Full Disclosure: This script uses sudo **"
+  echo ""
+}
 
-if [ -n "$github_user" ]; then
-  gh-auth add "$github_user"
-fi
+add(){
+  gh-auth add --users $@ --command="$(which tmux) attach -t pairing"
+}
 
-if [ -z "$tmux_session" ]; then
-  tmux_session="$(tmux display -p '#{session_name}')"
-fi
+rm(){
+  gh-auth remove --users $@
+}
 
-echo ssh -t ${USER}@${host} "'${tmux} at -t ${tmux_session}'" | tee >(pbcopy)
+ls(){
+  gh-auth list
+}
+
+up(){
+  # Add any users, if specified
+  if [[ ! -z $@ ]]; then
+    add $@
+  fi
+
+  tmux new-session -d -s pairing "ng connect"
+  tmux split-window
+  sleep 0.5 # some delay so tunnel has time to get up
+  tmux send-keys "pair ssh" C-m
+  tmux attach
+}
+
+ssh(){
+  clipboard_helper="reattach-to-user-namespace"
+  ssh_command=$(ng ssh)
+  echo $ssh_command
+
+  if [ $(command -v $clipboard_helper) ]; then
+    echo $ssh_command | $clipboard_helper pbcopy
+  else
+    echo "You must have $clipboard_helper installed to copy ssh command automatically. Try: brew install $clipboard_command"
+  fi
+}
+
+subcommand=$1
+case $subcommand in
+  '' | '-h' | '--help')
+    help ;;
+  *)
+    shift
+    ${subcommand} $@
+    ;;
+esac

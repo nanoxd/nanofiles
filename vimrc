@@ -216,8 +216,8 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
-" Generate ctags
-nmap <silent> <leader>rt :!ctags -R --exclude=".git\|.svn\|log\|tmp\|db\|pkg" --extra=+f<CR>
+" Generate ctags for Ruby
+nmap <silent> <leader>rt :!ctags -R --languages=ruby --exclude=.git --exclude=log . (bundle list --paths)<cr>
 
 " Source custom Solarized settings
 source ~/.vim/settings/solarized.vim

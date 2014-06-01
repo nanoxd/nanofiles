@@ -86,7 +86,7 @@ nnoremap <F12> :%s/:\([^ ]*\)\(\s*\)=>/\1:/g<return>
 " Plugins "
 source ~/.vimrc.plugins
 
-au FileType go nmap <Leader>g :w\|:!go run %<cr>
+autocmd FileType go nmap <Leader>g :w\|:!go run %<cr>
 
 "" CtrlP
 " Adds ; as the Ctrl+P fuzzy search
@@ -152,30 +152,30 @@ call matchadd('ColorColumn', '\%81v', 100)
 """"Language specific whitespace
 
 " make uses real tabs
-au FileType make set noexpandtab
+autocmd FileType make set noexpandtab
 
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
-au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Procfile,Thorfile,config.ru}  set ft=ruby
+autocmd BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Procfile,Thorfile,config.ru}  set ft=ruby
 
 " Set Sass files as sass
 autocmd BufRead,BufNewFile *.scss set filetype=scss
 
-au BufRead,BufNewFile *.txt call s:setupWrapping()
+autocmd BufRead,BufNewFile *.txt call s:setupWrapping()
 
 " make Python follow PEP8
-au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
+autocmd FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
 
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
 
 " Markdown files end in .md
-au BufRead,BufNewFile *.md set filetype=markdown
+autocmd BufRead,BufNewFile *.md set filetype=markdown
 " Enable spellchecking for Markdown
 autocmd BufRead,BufNewFile *.md setlocal spell
 autocmd FileType gitcommit setlocal spell
 
 " Set syntax for Go
-au BufRead,BufNewFile *.go set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+autocmd BufRead,BufNewFile *.go set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -193,7 +193,7 @@ let g:syntastic_enable_signs=1
 
 " Remember last location in file
 if has("autocmd")
-  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+  autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal g'\"" | endif
 endif
 

@@ -13,6 +13,7 @@ if !filereadable(vundle_readme)
 endif
 
 " Declare bundles are handled via Vundle
+filetype off
 set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin(expand('~/.vim/bundle/'))
 

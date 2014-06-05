@@ -126,7 +126,7 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme = 'solarized'
 let g:airline#extensions#tabline#enabled = 1
 
-set guifont=Ubuntu\ Mono\ Derivative\ Powerline:h18
+set guifont=Ubuntu\ Mono\ derivative\ Powerline:h18
 
 " Whitespace defaults
 set autoindent

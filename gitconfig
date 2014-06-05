@@ -30,6 +30,7 @@
   issues = !hub browse -- issues
   merge-branch = !git checkout master && git merge @{-1} --ff-only
   pn = push --set-upstream origin master
+  pr = !hub pull-request
   rebase-origin = !git fetch origin && git rebase origin/master
   reset-hard = reset --hard HEAD
   st = status -s

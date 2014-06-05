@@ -7,6 +7,8 @@ VIM is _the_ editor
 TMux drops it like it's not screen.  
 Git is my VCS and `hub` makes it better.  
 
+## KeyRemap4Macbook
+Caps lock is mapped to Escape + Hyper(⌘ + ⌃ + ⌥ + ⇧) if held down
 
 ## Keyboard Shortcuts
 Program       | Command   | Description

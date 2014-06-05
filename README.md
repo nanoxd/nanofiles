@@ -10,10 +10,12 @@ Git is my VCS and `hub` makes it better.
 ## KeyRemap4Macbook
 Caps lock is mapped to Escape + Hyper(⌘ + ⌃ + ⌥ + ⇧) if held down
 
-## Keyboard Shortcuts
+### Keyboard Shortcuts
 Program       | Command   | Description
 ------------- | --------- | -----------
 iTerm         | Hyper + T | Bring up full-screen terminal
 Inboard       | Hyper + S | Screenshot selection
 Alfred        | Hyper + V | Display snippets
 Spotify       | Hyper + A | Control Alfred's Spotify extension
+
+

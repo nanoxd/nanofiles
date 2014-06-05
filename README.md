@@ -14,3 +14,4 @@ Program       | Command   | Description
 iTerm         | Hyper + T | Bring up full-screen terminal
 Inboard       | Hyper + S | Screenshot selection
 Alfred        | Hyper + V | Display snippets
+Spotify       | Hyper + A | Control Alfred's Spotify extension

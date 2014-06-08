@@ -31,6 +31,7 @@ db/*.sqlite3
 vendor/bundler_gems
 .vagrant/
 zeus.json
+.rake_tasks
 
 # ctags
 tags

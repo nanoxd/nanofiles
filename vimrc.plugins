@@ -47,6 +47,7 @@ Plugin 'amdt/vim-niji'
 Plugin 'tpope/vim-jdaddy'
 Plugin 'jby/tmux.vim'
 Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'toyamarinyon/vim-swift'
 
 " Ruby
 Plugin 'vim-ruby/vim-ruby'

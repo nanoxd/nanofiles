@@ -1,0 +1,2 @@
+" Open Quickly
+map ,o  :xccmd openQuickly<CR>

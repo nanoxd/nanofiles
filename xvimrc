@@ -1,2 +1,4 @@
+" Show completions
+map ,c :xccmd complete<CR>
 " Open Quickly
 map ,o  :xccmd openQuickly<CR>

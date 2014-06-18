@@ -31,9 +31,7 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-if &shell =~# 'fish$'
-  set shell=/usr/bin/local/zsh
-endif
+set shell=/bin/zsh
 
 " Persistent Undo
 " Keep undo history across sessions, by storing in file.

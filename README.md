@@ -14,7 +14,7 @@ Caps lock is mapped to Escape + Hyper(⌘ + ⌃ + ⌥ + ⇧) if held down
 Program       | Command   | Description
 ------------- | --------- | -----------
 iTerm         | Hyper + T | Bring up full-screen terminal
-Inboard       | Hyper + S | Screenshot selection
+Monosnap      | Hyper + S | Screenshot of selection
 Alfred        | Hyper + V | Display snippets
 Spotify       | Hyper + A | Control Alfred's Spotify extension
 

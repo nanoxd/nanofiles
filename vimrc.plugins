@@ -100,7 +100,6 @@ Plugin 'AndrewRadev/splitjoin.vim'
 " Colors
 Plugin 'skwp/vim-colors-solarized'
 Plugin 'bling/vim-airline'
-Plugin 'chrisbra/Colorizer'
 
 " Linters
 Plugin 'marijnh/tern_for_vim'

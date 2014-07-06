@@ -16,6 +16,8 @@ set -x VAGRANT_HOME /Volumes/LaCie/vagrant
 set -x VAGRANT_VMWARE_CLONE_DIRECTORY /Volumes/LaCie/vagrant/vmware_clone_dir
 set -x TMUXIFIER_LAYOUT_PATH "~/.tmux-layouts"
 
+fish_user_abbreviations
+
 # Source Chruby
 . /usr/local/share/chruby/chruby.fish
 . /usr/local/share/chruby/auto.fish

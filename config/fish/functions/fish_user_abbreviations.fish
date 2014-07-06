@@ -1,7 +1,10 @@
 function fish_user_abbreviations
   set -U fish_user_abbreviations \
     'bi=brew install' \
+    'bch=brew cask home' \
     'bci=brew cask install' \
+    'bcs=brew cask search' \
+    'bcu=brew cask uninstall' \
     'e=vim' \
     'g=git' \
     'ga=git add' \

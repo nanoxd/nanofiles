@@ -12,8 +12,6 @@ set -U PAGER less
 # ENVs
 set -x GOPATH "$HOME/Developer/Code/go"
 set -x HOMEBREW_CASK_OPTS "--appdir=/Applications" # Install location
-set -x VAGRANT_HOME /Volumes/LaCie/vagrant
-set -x VAGRANT_VMWARE_CLONE_DIRECTORY /Volumes/LaCie/vagrant/vmware_clone_dir
 set -x TMUXIFIER_LAYOUT_PATH "$HOME/.tmux-layouts"
 
 fish_user_abbreviations
@@ -21,3 +19,7 @@ fish_user_abbreviations
 # Source Chruby
 . /usr/local/share/chruby/chruby.fish
 . /usr/local/share/chruby/auto.fish
+
+if test -f $HOME/.fish
+  . $HOME/.fish
+end

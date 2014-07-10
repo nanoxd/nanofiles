@@ -1,9 +1,6 @@
 [submodule "prezto"]
 	path = prezto
 	url = git@github.com:NanoXD/prezto.git
-[submodule "powerline-fonts"]
-	path = powerline-fonts
-	url = https://github.com/Lokaltog/powerline-fonts.git
 [submodule "tmuxifier"]
 	path = tmuxifier
 	url = https://github.com/jimeh/tmuxifier.git

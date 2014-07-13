@@ -14,6 +14,7 @@ function fish_user_abbreviations
     'gca=git commit -v --amend' \
     'gcb=git create-branch' \
     'gcl=git clone' \
+    'gco=git checkout' \
     'gd=git diff' \
     'gdc=git diff --cached' \
     'gp=git push' \

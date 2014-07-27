@@ -18,6 +18,7 @@ function fish_user_abbreviations
     'gd=git diff' \
     'gdc=git diff --cached' \
     'gp=git push' \
+    'gpr=git pull-request --browse' \
     'gpu=git pull --rebase' \
     'gs=git status -s' \
     'git-pr=git am -3' \

@@ -1,5 +1,5 @@
 # Set paths
-set -U fish_user_paths /usr/local/sbin /usr/local/bin /usr/local/share/npm/bin /usr/local/share/python ~/bin ~/.tmuxifier/bin $GOPATH/bin
+set -U fish_user_paths /usr/local/sbin /usr/local/bin /usr/local/share/npm/bin /usr/local/share/python ~/bin ~/.tmuxifier/bin $GOPATH/bin /Applications/Postgres.app/Contents/Versions/9.3/bin
 
 # Load Solarized for colors
 . $HOME/.config/fish/solarized.fish

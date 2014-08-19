@@ -14,6 +14,9 @@ set -x GOPATH "$HOME/Developer/Code/go"
 set -x HOMEBREW_CASK_OPTS "--appdir=/Applications" # Install location
 set -x TMUXIFIER_LAYOUT_PATH "$HOME/.tmux-layouts"
 
+# Tmuxifier
+eval (tmuxifier init -)
+
 # Custom behavior
 fish_user_abbreviations
 set fish_key_bindings fish_vi_key_bindings

@@ -14,6 +14,7 @@ set -x GOPATH "$HOME/Developer/Code/go"
 set -x HOMEBREW_CASK_OPTS "--appdir=/Applications" # Install location
 set -x TMUXIFIER_LAYOUT_PATH "$HOME/.tmux-layouts"
 set -x ANDROID_SDK_ROOT "/Applications/Android Studio.app/sdk"
+set -x ANDROID_HOME $ANDROID_SDK_ROOT
 
 # Tmuxifier
 eval (tmuxifier init -)

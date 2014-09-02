@@ -1,5 +1,5 @@
 # Set paths
-set -U fish_user_paths /usr/local/sbin /usr/local/bin /usr/local/share/npm/bin /usr/local/share/python ~/bin ~/.tmuxifier/bin $GOPATH/bin /Applications/Postgres.app/Contents/Versions/9.3/bin
+set -U fish_user_paths /usr/local/sbin /usr/local/bin /usr/local/share/npm/bin /usr/local/share/python ~/bin ~/.tmuxifier/bin $GOPATH/bin /Applications/Postgres.app/Contents/Versions/9.3/bin $ANDROID_SDK_ROOT/tools $ANDROID_SDK_ROOT/platform-tools
 
 # Load Solarized for colors
 . $HOME/.config/fish/solarized.fish
@@ -13,6 +13,7 @@ set -U PAGER less
 set -x GOPATH "$HOME/Developer/Code/go"
 set -x HOMEBREW_CASK_OPTS "--appdir=/Applications" # Install location
 set -x TMUXIFIER_LAYOUT_PATH "$HOME/.tmux-layouts"
+set -x ANDROID_SDK_ROOT "/Applications/Android Studio.app/sdk"
 
 # Tmuxifier
 eval (tmuxifier init -)

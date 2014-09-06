@@ -1,4 +1,3 @@
-# Fish related stuff
 config/fish/fishd.*
 config/fish/fish_history
 config/fish/fish_read_history
@@ -6,3 +5,4 @@ config/fish/generated_completions
 config/hub
 config/configstore
 config/libimobiledevice
+config/NzbDrone

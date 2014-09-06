@@ -23,9 +23,8 @@ eval (tmuxifier init -)
 fish_user_abbreviations
 set fish_key_bindings fish_vi_key_bindings
 
-# Source Chruby
-. /usr/local/share/chruby/chruby.fish
-. /usr/local/share/chruby/auto.fish
+# Source Fry
+. /usr/local/share/fry/fry.fish
 
 if test -f $HOME/.fish
   . $HOME/.fish

@@ -29,3 +29,5 @@ set fish_key_bindings fish_vi_key_bindings
 if test -f $HOME/.fish
   . $HOME/.fish
 end
+
+test -s /Users/nano/.nvm-fish/nvm.fish; and source /Users/nano/.nvm-fish/nvm.fish

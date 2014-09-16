@@ -1,118 +1,94 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Vundle && Plugin Specific Settings
+" => Vim-plug && Plug Specific Settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Setting up Vundle
-let iCanHazVundle=1
-let vundle_readme=expand('~/.vim/bundle/Vundle.vim/README.md')
-if !filereadable(vundle_readme)
-  echo "Installing Vundle.."
-  echo ""
-  silent !mkdir -p ~/.vim/bundle
-  silent !git clone https://github.com/gmarik/Vundle.vim ~/.vim/bundle/Vundle.vim
-  let iCanHazVundle=0
-endif
-
-" Declare bundles are handled via Vundle
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#begin(expand('~/.vim/bundle/'))
-
-" Let Vundle manage itself
-Plugin 'gmarik/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 
 " Languages
-Plugin 'guns/vim-clojure-static'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'ekalinin/Dockerfile.vim'
-Plugin 'dag/vim-fish'
-Plugin 'tpope/vim-git'
-Plugin 'fatih/vim-go'
-Plugin 'tpope/vim-haml'
-Plugin 'wlangstroth/vim-haskell'
-Plugin 'xenoterracide/html.vim'
-Plugin 'vim-scripts/HTML-AutoCloseTag'
-Plugin 'pangloss/vim-javascript'
-Plugin 'othree/javascript-libraries-syntax.vim'
-Plugin 'itspriddle/vim-jquery'
-Plugin 'leshill/vim-json'
-Plugin 'groenewege/vim-less.git'
-Plugin 'tpope/vim-markdown'
-Plugin 'jtratner/vim-flavored-markdown.git'
-Plugin 'b4winckler/vim-objc'
-Plugin 'rodjek/vim-puppet'
-Plugin 'wlangstroth/vim-racket'
-Plugin 'aaronjensen/vim-sass-status.git'
-Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'amdt/vim-niji'
-Plugin 'tpope/vim-jdaddy'
-Plugin 'jby/tmux.vim'
-Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'Keithbsmiley/swift.vim'
+Plug 'guns/vim-clojure-static'
+Plug 'kchmck/vim-coffee-script'
+Plug 'ekalinin/Dockerfile.vim'
+Plug 'dag/vim-fish', { 'for': 'fish' }
+Plug 'tpope/vim-git'
+Plug 'fatih/vim-go'
+Plug 'tpope/vim-haml'
+Plug 'wlangstroth/vim-haskell', { 'for': 'haskell' }
+Plug 'xenoterracide/html.vim'
+Plug 'vim-scripts/HTML-AutoCloseTag'
+Plug 'pangloss/vim-javascript'
+Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'itspriddle/vim-jquery'
+Plug 'leshill/vim-json'
+Plug 'groenewege/vim-less'
+Plug 'tpope/vim-markdown'
+Plug 'jtratner/vim-flavored-markdown'
+Plug 'b4winckler/vim-objc'
+Plug 'rodjek/vim-puppet'
+Plug 'wlangstroth/vim-racket', { 'for': 'racket' }
+Plug 'aaronjensen/vim-sass-status'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'amdt/vim-niji'
+Plug 'tpope/vim-jdaddy'
+Plug 'jby/tmux.vim'
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'Keithbsmiley/swift.vim'
 
 " Ruby
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'sunaku/vim-ruby-minitest'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-rake'
-Plugin 'tpope/vim-cucumber'
-Plugin 'Keithbsmiley/rspec.vim'
-Plugin 'tpope/vim-bundler'
+Plug 'vim-ruby/vim-ruby'
+Plug 'sunaku/vim-ruby-minitest'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-rake'
+Plug 'tpope/vim-cucumber'
+Plug 'Keithbsmiley/rspec.vim'
+Plug 'tpope/vim-bundler'
 
 " Tools
-Plugin 'rking/ag.vim'
-Plugin 'nelstrom/vim-visual-star-search'
-Plugin 'tpope/vim-abolish'
-Plugin 'vim-scripts/ctags.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'tpope/vim-speeddating'
+Plug 'rking/ag.vim'
+Plug 'nelstrom/vim-visual-star-search'
+Plug 'tpope/vim-abolish'
+Plug 'vim-scripts/ctags.vim'
+Plug 'kien/ctrlp.vim'
+Plug 'tpope/vim-speeddating'
 " Adds automatic closing of quotes
-Plugin 'Raimondi/delimitMate'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-fugitive'
-Plugin 'christoomey/vim-conflicted'
-Plugin 'skwp/greplace.vim'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-Plugin 'benmills/vimux'
-Plugin 'danro/rename.vim'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-vinegar'
-Plugin 'terryma/vim-multiple-cursors'
+Plug 'Raimondi/delimitMate'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-fugitive'
+Plug 'christoomey/vim-conflicted'
+Plug 'skwp/greplace.vim'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'benmills/vimux'
+Plug 'danro/rename.vim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-vinegar'
+Plug 'terryma/vim-multiple-cursors'
 
 " Text Objects
-Plugin 'kana/vim-textobj-user'
-Plugin 'bootleq/vim-textobj-rubysymbol'
-Plugin 'nelstrom/vim-textobj-rubyblock'
-Plugin 'coderifous/textobj-word-column.vim'
+Plug 'kana/vim-textobj-user'
+Plug 'bootleq/vim-textobj-rubysymbol'
+Plug 'nelstrom/vim-textobj-rubyblock'
+Plug 'coderifous/textobj-word-column.vim'
 
-Plugin 'godlygeek/tabular'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'tolecnal/vim-matchit'
-Plugin 'mattboehm/vim-unstack'
-Plugin 'rizzatti/funcoo.vim'
-Plugin 'tpope/vim-repeat'
-Plugin 'majutsushi/tagbar'
-Plugin 'ervandew/supertab'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'AndrewRadev/splitjoin.vim'
+Plug 'godlygeek/tabular'
+Plug 'tomtom/tcomment_vim'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'tolecnal/vim-matchit'
+Plug 'mattboehm/vim-unstack'
+Plug 'rizzatti/funcoo.vim'
+Plug 'tpope/vim-repeat'
+Plug 'majutsushi/tagbar'
+Plug 'ervandew/supertab'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+Plug 'AndrewRadev/splitjoin.vim'
 
 " Colors
-Plugin 'skwp/vim-colors-solarized'
-Plugin 'bling/vim-airline'
+Plug 'skwp/vim-colors-solarized'
+Plug 'bling/vim-airline'
 
 " Linters
-Plugin 'marijnh/tern_for_vim'
-Plugin 'scrooloose/syntastic'
+Plug 'marijnh/tern_for_vim'
+Plug 'scrooloose/syntastic'
 
-" Notification message
-if iCanHazVundle == 0
-  echo "Installing Bundles, please ignore key map error messages"
-  echo ""
-  :PluginInstall
-endif
-
-call vundle#end()
+call plug#end()
 filetype plugin indent on
 
 " YouCompleteMe settings
@@ -124,7 +100,6 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " CtrlP
 let g:ctrlp_match_window = 'max:20'
-
 
 " Tagbar for Go
 let g:tagbar_type_go = {

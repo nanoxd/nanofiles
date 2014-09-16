@@ -14,3 +14,4 @@ complete -f -c tmuxinator -n '__fish_tmuxinator_using_command start' -a '(tmuxin
 complete -f -c tmuxinator -n '__fish_tmuxinator_using_command open' -a '(tmuxinator completions open)'
 complete -f -c tmuxinator -n '__fish_tmuxinator_using_command copy' -a '(tmuxinator completions copy)'
 complete -f -c tmuxinator -n '__fish_tmuxinator_using_command delete' -a '(tmuxinator completions delete)'
+complete -c mux --wraps tmuxinator

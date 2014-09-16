@@ -24,6 +24,9 @@ function fish_user_abbreviations
     'git-pr=git am -3' \
     'gi=gem install' \
     'gu=gem update' \
+    'tma=tmux -2 attach -t' \
+    'tmk=tmux kill-session -t' \
+    'tml=tmux list-sessions' \
     'vag=vagrant' \
     'ytd=youtube-dl'
 end

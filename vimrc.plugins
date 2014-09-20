@@ -7,6 +7,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'guns/vim-clojure-static'
 Plug 'kchmck/vim-coffee-script'
 Plug 'ekalinin/Dockerfile.vim'
+Plug 'elixir-lang/vim-elixir'
 Plug 'dag/vim-fish', { 'for': 'fish' }
 Plug 'tpope/vim-git'
 Plug 'fatih/vim-go'

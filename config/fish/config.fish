@@ -13,8 +13,6 @@ set -U PAGER less
 set -x GOPATH "$HOME/Developer/Code/go"
 set -x HOMEBREW_CASK_OPTS "--appdir=/Applications" # Install location
 set -x TMUXIFIER_LAYOUT_PATH "$HOME/.tmux-layouts"
-set -x RUBYMOTION_ANDROID_SDK "$HOME/android-rubymotion/sdk"
-set -x RUBYMOTION_ANDROID_NDK "$HOME/android-rubymotion/ndk"
 
 # Tmuxifier
 eval (tmuxifier init -)

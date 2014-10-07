@@ -23,6 +23,7 @@ function fish_user_abbreviations
     'gs=git status -s' \
     'git-pr=git am -3' \
     'gi=gem install' \
+    'gt=gittower' \
     'gu=gem update' \
     'tma=tmux -2 attach -t' \
     'tmk=tmux kill-session -t' \
